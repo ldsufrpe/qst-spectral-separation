@@ -2,7 +2,9 @@
   "itf_vs_bounds": {
     "panels": [
       "(a) K4-module chain, Delta_mod = 24, k = 3..12, versus D",
-      "(b) K4-module chain, k = 5 (D = 9), versus g/(2 delta)"
+      "(b) K4-module chain, k = 5 (D = 9), versus g/(2 delta)",
+      "(c) binary tree of K4 modules (Example 7.5), s in the root, t in a leaf at depth r = 1..12, versus D = 2r+1",
+      "(d) same tree, fixed pair with D = 17, depth r = 8..16, versus the number of modules k"
     ],
     "elements": [
       {
@@ -30,10 +32,28 @@
         "panel": "all"
       },
       {
+        "artist": "line+down-triangle markers",
+        "encodes": "diameter form min{1,(C1unif e^{-gamma D})^2}",
+        "visual": "vermillion #D55E00, dotted, down-triangle",
+        "panel": "(c),(d)"
+      },
+      {
+        "artist": "line+plus markers",
+        "encodes": "Theorem C bound min{1, calC e^{-2 beta D}}",
+        "visual": "blue #0072B2, solid, filled plus",
+        "panel": "(c),(d)"
+      },
+      {
         "artist": "legend",
-        "encodes": "the four series",
+        "encodes": "the four chain series",
         "visual": "lower left of (a), no frame",
         "panel": "(a)"
+      },
+      {
+        "artist": "legend",
+        "encodes": "the four tree series",
+        "visual": "lower right of (c), no frame",
+        "panel": "(c)"
       },
       {
         "artist": "panel titles",

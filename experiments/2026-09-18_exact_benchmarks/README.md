@@ -9,7 +9,7 @@ On the fourteen instances of Examples 7.1–7.3, the certificates Σ₁, F_esp a
 Section 7 under an earlier numbering)
 
 ## What was computed
-For each of the 14 rows of the three tables of Section 7 (Examples 7.1–7.3; s and t as in §7,
+For each of the 14 rows of Table 2 of Section 7 (Examples 7.1–7.3, printed as three tables when this ran; s and t as in §7,
 κ = κ_tab), the following exact
 quantities were computed by multiprecision diagonalization (mpmath `eigsy`):
 - `S(s,t)` and ITF `S²`, grouped by distinct eigenvalue with tolerance 10⁻⁴⁰
@@ -73,15 +73,17 @@ grow linearly along the chain) halves the residual in K4 and dimer. The data the
 faster-than-exponential curvature on top of the rate gap. With 3–10 points per family, this
 is suggestive, not decisive.
 
-## Figure `figures/itf_vs_bounds.pdf` (sweep, `results/sweep.csv`)
-K4 family, w = 0.1. (a) Δ_mod = 24, k = 3…12: the ITF falls from 5.5·10⁻¹⁶ to 1.0·10⁻¹⁰²,
+## Figure 1 of the manuscript: `figures/itf_vs_bounds.pdf`
+Panels (a), (b) come from the sweep in `results/sweep.csv`. Panels (c), (d) plot the binary tree
+of modules from `../2026-09-18_binary_tree_family/results/aggregate.csv` (root to a leaf at depth
+r = 1…12) and `fixed_pair.csv` (a fixed pair at D = 17 while the tree grows to k = 131 071
+modules); no computation is repeated. K4 family, w = 0.1. (a) Δ_mod = 24, k = 3…12: the ITF falls from 5.5·10⁻¹⁶ to 1.0·10⁻¹⁰²,
 while `min{1,Σ1²}` falls from 1.0·10⁻⁴ to 2.3·10⁻¹⁶. (b) k = 5, `g/(2δ)` from 100 down to
 1.05: `Σ1²` and `b_η²` reach 1 at `g/(2δ) ≤ 2` and ≤ 1.2 respectively, and `B_E² ≈ 0.54` is
 the only informative bound near the edge of (H2). Meanwhile the ITF stays at 8·10⁻¹⁹. κ is
 grid-optimal (step 10⁻³, 1/2 on plateaus). Element list: `figures/figure_manifest.json`.
-The rendered PDF/PNG is not versioned in this release, because the figure is still under
-review; `code/make_figure.py` regenerates it from `results/sweep.csv` and needs a LaTeX
-installation (the SciencePlots `science` style sets `text.usetex`).
+The rendered PDF/PNG is not versioned in this release; `code/make_figure.py` regenerates it
+from those CSV files and needs a LaTeX installation (the SciencePlots `science` style sets `text.usetex`).
 
 ## Hypothesis check (plan.md)
 **Refuted as stated:** "Σ1/S stays within a few orders of magnitude". The ratio ranges from
