@@ -20,7 +20,7 @@ from cycler import cycler
 EXP = Path(__file__).resolve().parent.parent
 plt.style.use(["science", "ieee"])
 matplotlib.rcParams.update({
-    "figure.figsize": (6.48, 5.0),          # elsevier-1col full width (LAA), 2x2 panels
+    "figure.figsize": (6.48, 4.5),          # 2x2; keeps figure+caption <= 75% of textheight (R2)
     "savefig.dpi": 300, "savefig.bbox": "tight", "savefig.pad_inches": 0.05,
     "savefig.format": "pdf",
     "axes.prop_cycle": cycler(color=["#000000", "#E69F00", "#56B4E9", "#009E73",
@@ -54,6 +54,8 @@ def main():
         axb.plot([float(r["g_over_2delta"]) for r in pb], [float(r[col]) for r in pb], color=colr,
                  marker=mk, ls=ls, ms=3, label=lab)
     axa.set_yscale("log")
+    axa.set_yticks([10.0**e for e in range(0, -106, -15)])  # decades anchored at 10^0
+    axa.set_ylim(top=30.0)
     axa.set_xlabel(r"distance $D=\mathrm{dist}(s,t)$")
     axa.set_ylabel(r"ITF and certificates")
     axa.set_title(r"(a) $\Delta_{\rm mod}=24$, $k=3,\dots,12$", fontsize=8)
@@ -101,9 +103,9 @@ def main():
             {"artist": "line+square markers", "encodes": "spatial certificate min{1, Sigma1^2} at grid-optimal kappa",
              "visual": "orange #E69F00, solid, square", "panel": "all"},
             {"artist": "line+triangle markers", "encodes": "subspace bound b_eta^2 (Cor. comparacao)",
-             "visual": "sky blue #56B4E9, dashed, triangle", "panel": "all"},
+             "visual": "sky blue #56B4E9, dashed, triangle", "panel": "(a),(b)"},
             {"artist": "line+diamond markers", "encodes": "energy bound B_E^2 (Prop. energia)",
-             "visual": "bluish green #009E73, dash-dot, diamond", "panel": "all"},
+             "visual": "bluish green #009E73, dash-dot, diamond", "panel": "(a),(b)"},
             {"artist": "line+down-triangle markers", "encodes": "diameter form min{1,(C1unif e^{-gamma D})^2}",
              "visual": "vermillion #D55E00, dotted, down-triangle", "panel": "(c),(d)"},
             {"artist": "line+plus markers", "encodes": "Theorem C bound min{1, calC e^{-2 beta D}}",
@@ -112,14 +114,15 @@ def main():
             {"artist": "legend", "encodes": "the four tree series", "visual": "lower right of (c), no frame", "panel": "(c)"},
             {"artist": "panel titles", "encodes": "parameters of each panel", "visual": "8 pt text above axes", "panel": "all"},
         ],
-        "axes": {"x": "(a) graph distance D; (b) g/(2 delta), dimensionless",
+        "axes": {"x": "(a) graph distance D; (b) g/(2 delta), dimensionless; (c) D = 2r+1; (d) number of modules k",
                  "y": "ITF and certificate values (dimensionless, shared meaning, not shared axis)",
-                 "xscale": "(a) linear; (b) log", "yscale": "log"},
+                 "xscale": "(a),(c) linear; (b),(d) log", "yscale": "log"},
         "params": {"family": "K4 modules (Example 7.1)", "w": 0.1, "m": 4,
                    "panel_a": "Delta_mod = 24, k = 3..12",
                    "panel_b": "k = 5, Delta_mod = 4 + 0.2 * (g/2delta), g/(2delta) in {1.05,1.2,1.5,2,3,5,10,30,100}",
                    "kappa": "grid-optimal for Sigma1 on step 1e-3 (1/2 on plateaus)",
-                   "s,t": "first vertex of V_0, last vertex of V_{k-1}"},
+                   "s,t": "first vertex of V_0, last vertex of V_{k-1}",
+                   "panels_c_d": "binary tree (Example 7.5), w = 0.1; tree series plotted as min{1, value}; ITF only for r <= 5 in (c), absent in (d)"},
         "reference_lines": ["(b) vertical dotted grey line at g/(2 delta) = 1, the edge of hypothesis (H2)"],
         "normalization": "none; all quantities are probabilities or bounds on them in [0,1]",
     }}
