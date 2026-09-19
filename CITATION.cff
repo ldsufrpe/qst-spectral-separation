@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the paper."
+type: software
+title: "qst-spectral-separation: computations for 'Localization of Spectral Projectors from Block Data, with an Application to Quantum State Transfer'"
+authors:
+  - family-names: "da Silva"
+    given-names: "Leon D."
+    affiliation: "Departamento de Matemática, Universidade Federal Rural de Pernambuco"
+  - family-names: "da Silva"
+    given-names: "Eberson Ferreira"
+    affiliation: "Departamento de Matemática, Universidade Federal Rural de Pernambuco"
+  - family-names: "de Veras"
+    given-names: "Tiago Mendonça Lucena"
+    affiliation: "Departamento de Matemática, Universidade Federal Rural de Pernambuco"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - spectral projectors
+  - localization
+  - block matrices
+  - quantum state transfer
+  - ball arithmetic
+preferred-citation:
+  type: article
+  status: in-preparation
+  title: "Localization of Spectral Projectors from Block Data, with an Application to Quantum State Transfer"
+  authors:
+    - family-names: "da Silva"
+      given-names: "Leon D."
+    - family-names: "da Silva"
+      given-names: "Eberson Ferreira"
+    - family-names: "de Veras"
+      given-names: "Tiago Mendonça Lucena"
+  year: 2026
