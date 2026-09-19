@@ -1,0 +1,3460 @@
+{
+  "experiment_id": "2026-09-18_exact_benchmarks",
+  "paper_project": "2026-09_qst-spectral-separation",
+  "opportunity_reference": "opportunities.md #1",
+  "mode": "numerical",
+  "subareas_active": [
+    "numerical"
+  ],
+  "target_venue": "Linear Algebra and its Applications",
+  "created_at": "2026-09-18T00:00:00-03:00",
+  "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+  "plan_md_hash": "sha256:e673612a7e6b888f3322db911ebb619092aeccce8e18225cc09aafb78a3e1720",
+  "code_commit": "git:71b6e0f",
+  "system_info_hash": "sha256:ee21e8248a4c75ded78befb74c853845ce45cf770381c0556cb5f98c0b54595c",
+  "runs": [
+    {
+      "timestamp_start": "2026-09-18T20:53:47-03:00",
+      "timestamp_end": "2026-09-18T20:53:48-03:00",
+      "wallclock_seconds": 1.3,
+      "peak_memory_mb": 153.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 3,
+        "kappa": "0.5000",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "smoke",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 3,
+          "n": 12,
+          "D": 5,
+          "kappa": "1/2",
+          "dps": 60,
+          "S": "2.341349522e-8",
+          "ITF": "5.481917585e-16",
+          "Fbar": "1.067674249e-16",
+          "F_samp": "5.481917469e-16",
+          "Sigma1": "0.01007550314",
+          "F_esp": "0.0001015157636",
+          "B2": "0.0001010049997",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.2653061224",
+          "Sigma2": "5.050441282e-5",
+          "gamma_kappa": "0.8053591712",
+          "ratio_Sigma1_over_S": "430328.8786",
+          "ratio_B2_over_ITF": "1.842512189e+11",
+          "ratio_Fesp_over_Fsamp": "1.851829477e+11",
+          "eig_residual": "1.991364889e-59",
+          "orth_error": "7.778769097e-61",
+          "min_group_gap": "0.0002833797761",
+          "max_within_group": "1.493523667e-59",
+          "n_distinct": 10,
+          "seconds": 1.3416516780853271,
+          "Sigma1_vs_arb_reldiff": "3.50877193e-16",
+          "S_float64": 2.3413495226267152e-08,
+          "S_float64_reldiff": "1.609986123e-10",
+          "dps_trail": "[(60, '2.3413495e-8', 1.3)]",
+          "F_samp_meta": {
+            "T": 15103.696291819475,
+            "dt": 0.007551848145909737,
+            "n_terms": 7,
+            "dropped_rel_mass": 4.206834773488394e-57,
+            "tau_star": 0.7853913452675159,
+            "amp_rel": 0.9999999894192755
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0001"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:53:56-03:00",
+      "timestamp_end": "2026-09-18T20:53:58-03:00",
+      "wallclock_seconds": 1.4,
+      "peak_memory_mb": 153.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 3,
+        "kappa": "0.5000",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 3,
+          "n": 12,
+          "D": 5,
+          "kappa": "1/2",
+          "dps": 60,
+          "S": "2.341349522e-8",
+          "ITF": "5.481917585e-16",
+          "Fbar": "1.067674249e-16",
+          "F_samp": "5.481917469e-16",
+          "Sigma1": "0.01007550314",
+          "F_esp": "0.0001015157636",
+          "B2": "0.0001010049997",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.2653061224",
+          "Sigma2": "5.050441282e-5",
+          "gamma_kappa": "0.8053591712",
+          "ratio_Sigma1_over_S": "430328.8786",
+          "ratio_B2_over_ITF": "1.842512189e+11",
+          "ratio_Fesp_over_Fsamp": "1.851829477e+11",
+          "eig_residual": "1.991364889e-59",
+          "orth_error": "7.778769097e-61",
+          "min_group_gap": "0.0002833797761",
+          "max_within_group": "1.493523667e-59",
+          "n_distinct": 10,
+          "seconds": 1.3956189155578613,
+          "Sigma1_vs_arb_reldiff": "3.50877193e-16",
+          "S_float64": 2.3413495226267152e-08,
+          "S_float64_reldiff": "1.609986123e-10",
+          "dps_trail": "[(60, '2.3413495e-8', 1.4)]",
+          "F_samp_meta": {
+            "T": 15103.696291819475,
+            "dt": 0.007551848145909737,
+            "n_terms": 7,
+            "dropped_rel_mass": 4.206834773488394e-57,
+            "tau_star": 0.7853913452675159,
+            "amp_rel": 0.9999999894192755
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0002"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:53:58-03:00",
+      "timestamp_end": "2026-09-18T20:54:00-03:00",
+      "wallclock_seconds": 2.2,
+      "peak_memory_mb": 177.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 4,
+        "kappa": "0.5000",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 4,
+          "n": 16,
+          "D": 7,
+          "kappa": "1/2",
+          "dps": 60,
+          "S": "1.510172387e-12",
+          "ITF": "2.28062064e-24",
+          "Fbar": "3.534194595e-25",
+          "F_samp": "2.280620578e-24",
+          "Sigma1": "0.01010075503",
+          "F_esp": "0.0001020252522",
+          "B2": "0.0001010049997",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.19",
+          "Sigma2": "5.050505047e-5",
+          "gamma_kappa": "0.8053591712",
+          "ratio_Sigma1_over_S": "6688478160.0",
+          "ratio_B2_over_ITF": "4.42883827e+19",
+          "ratio_Fesp_over_Fsamp": "4.473574131e+19",
+          "eig_residual": "3.982729778e-59",
+          "orth_error": "1.244603056e-60",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "3.982729778e-59",
+          "n_distinct": 14,
+          "seconds": 2.2113187313079834,
+          "Sigma1_vs_arb_reldiff": "1.386e-13",
+          "dps_trail": "[(60, '1.5101724e-12', 2.2)]",
+          "F_samp_meta": {
+            "T": 10334.13273785957,
+            "dt": 0.005167066368929786,
+            "n_terms": 10,
+            "dropped_rel_mass": 2.5115933330661208e-57,
+            "tau_star": 0.7853958720498826,
+            "amp_rel": 0.9999999865150215
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0003"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:00-03:00",
+      "timestamp_end": "2026-09-18T20:54:03-03:00",
+      "wallclock_seconds": 2.7,
+      "peak_memory_mb": 200.5,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 5,
+        "kappa": "0.8440",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "kappa": "211/250",
+          "dps": 60,
+          "S": "5.745261979e-17",
+          "ITF": "3.300803521e-33",
+          "Fbar": "4.5793435e-34",
+          "F_samp": "3.30080343e-33",
+          "Sigma1": "0.003587488488",
+          "F_esp": "1.287007365e-5",
+          "B2": "1.287007365e-5",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.1479289941",
+          "Sigma2": "6.168046692e-6",
+          "gamma_kappa": "1.12781504",
+          "ratio_Sigma1_over_S": "6.244255703e+13",
+          "ratio_B2_over_ITF": "3.899072929e+27",
+          "ratio_Fesp_over_Fsamp": "3.899073037e+27",
+          "eig_residual": "2.489206111e-59",
+          "orth_error": "1.866904583e-60",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "3.982729778e-59",
+          "n_distinct": 18,
+          "seconds": 2.7112066745758057,
+          "Sigma1_vs_arb_reldiff": "6.913422759e-14",
+          "dps_trail": "[(60, '5.745262e-17', 2.7)]",
+          "F_samp_meta": {
+            "T": 7853.950661502993,
+            "dt": 0.003926975330751497,
+            "n_terms": 13,
+            "dropped_rel_mass": 3.2938361717170794e-57,
+            "tau_star": 0.785397469371023,
+            "amp_rel": 0.9999999861897075
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0004"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:03-03:00",
+      "timestamp_end": "2026-09-18T20:54:06-03:00",
+      "wallclock_seconds": 3.0,
+      "peak_memory_mb": 223.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 6,
+        "kappa": "0.8712",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 6,
+          "n": 24,
+          "D": 11,
+          "kappa": "1089/1250",
+          "dps": 60,
+          "S": "1.437919977e-21",
+          "ITF": "2.06761386e-42",
+          "Fbar": "2.598151884e-43",
+          "F_samp": "2.067613803e-42",
+          "Sigma1": "0.0004278169628",
+          "F_esp": "1.830273537e-7",
+          "B2": "1.830273537e-7",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.12109375",
+          "Sigma2": "6.599458022e-8",
+          "gamma_kappa": "1.149375109",
+          "ratio_Sigma1_over_S": "2.97524876e+17",
+          "ratio_B2_over_ITF": "8.852105182e+34",
+          "ratio_Fesp_over_Fsamp": "8.852105426e+34",
+          "eig_residual": "4.480571e-59",
+          "orth_error": "2.178055347e-60",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "8.961142e-59",
+          "n_distinct": 22,
+          "seconds": 2.9916322231292725,
+          "Sigma1_vs_arb_reldiff": "7.016043723e-15",
+          "dps_trail": "[(60, '1.43792e-21', 3.0)]",
+          "F_samp_meta": {
+            "T": 6333.836013028896,
+            "dt": 0.0031669180065144477,
+            "n_terms": 16,
+            "dropped_rel_mass": 1.9475147602260245e-56,
+            "tau_star": 0.7853979634357606,
+            "amp_rel": 0.9999999862007594
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0005"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:06-03:00",
+      "timestamp_end": "2026-09-18T20:54:17-03:00",
+      "wallclock_seconds": 11.7,
+      "peak_memory_mb": 261.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 8,
+        "kappa": "0.8615",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 8,
+          "n": 32,
+          "D": 15,
+          "kappa": "1723/2000",
+          "dps": 120,
+          "S": "3.350593112e-31",
+          "ITF": "1.12264742e-61",
+          "Fbar": "1.214601316e-62",
+          "F_samp": "1.122647389e-61",
+          "Sigma1": "2.352572959e-5",
+          "F_esp": "5.534599527e-10",
+          "B2": "5.534599527e-10",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.08884297521",
+          "Sigma2": "1.667682356e-10",
+          "gamma_kappa": "1.141739624",
+          "ratio_Sigma1_over_S": "7.021362727e+25",
+          "ratio_B2_over_ITF": "4.929953454e+51",
+          "ratio_Fesp_over_Fsamp": "4.92995359e+51",
+          "eig_residual": "9.913835302e-119",
+          "orth_error": "2.129925553e-120",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "7.435376477e-119",
+          "n_distinct": 30,
+          "seconds": 3.8264646530151367,
+          "Sigma1_vs_arb_reldiff": "1.194933899e-13",
+          "S_precision_reldiff": "4.903878313e-102",
+          "dps_trail": "[(60, '3.3505931e-31', 3.9), (120, '3.3505931e-31', 3.8), (140, '3.3505931e-31', 4.0)]",
+          "F_samp_meta": {
+            "T": 4566.257922496448,
+            "dt": 0.002283128961248224,
+            "n_terms": 22,
+            "dropped_rel_mass": 1.52765997574923e-116,
+            "tau_star": 0.785398148208339,
+            "amp_rel": 0.9999999862231204
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0006"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:23-03:00",
+      "timestamp_end": "2026-09-18T20:54:25-03:00",
+      "wallclock_seconds": 1.9,
+      "peak_memory_mb": 152.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 3,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "1/1000"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 3,
+          "n": 12,
+          "D": 5,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "1/1000",
+          "gamma_kappa": "2.4719422e-3",
+          "ITF": "5.4819176e-16",
+          "Fbar": "1.0676742e-16",
+          "F_samp": "5.4819175e-16",
+          "Sigma1_sq": "1.0151576e-4",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.26530612",
+          "B2": "1.01005e-4",
+          "ratio_B2_over_ITF": "1.8425122e+11",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0007"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:25-03:00",
+      "timestamp_end": "2026-09-18T20:54:27-03:00",
+      "wallclock_seconds": 2.4,
+      "peak_memory_mb": 176.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 4,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "1/1000"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 4,
+          "n": 16,
+          "D": 7,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "1/1000",
+          "gamma_kappa": "2.4719422e-3",
+          "ITF": "2.2806206e-24",
+          "Fbar": "3.5341946e-25",
+          "F_samp": "2.2806206e-24",
+          "Sigma1_sq": "1.0202525e-4",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.19",
+          "B2": "1.01005e-4",
+          "ratio_B2_over_ITF": "4.4288383e+19",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0008"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:27-03:00",
+      "timestamp_end": "2026-09-18T20:54:30-03:00",
+      "wallclock_seconds": 3.2,
+      "peak_memory_mb": 200.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "211/250"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "211/250",
+          "gamma_kappa": "1.127815",
+          "ITF": "3.3008035e-33",
+          "Fbar": "4.5793435e-34",
+          "F_samp": "3.3008034e-33",
+          "Sigma1_sq": "1.2870074e-5",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.14792899",
+          "B2": "1.2870074e-5",
+          "ratio_B2_over_ITF": "3.8990729e+27",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0009"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:17-03:00",
+      "timestamp_end": "2026-09-18T20:54:37-03:00",
+      "wallclock_seconds": 20.1,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 10,
+        "kappa": "0.8681",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 10,
+          "n": 40,
+          "D": 19,
+          "kappa": "8681/10000",
+          "dps": 120,
+          "S": "2.761964362e-41",
+          "ITF": "7.628447136e-82",
+          "Fbar": "7.352270026e-83",
+          "F_samp": "7.628446926e-82",
+          "Sigma1": "8.804019996e-7",
+          "F_esp": "7.75107681e-13",
+          "B2": "7.75107681e-13",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.07015306122",
+          "Sigma2": "2.227136717e-13",
+          "gamma_kappa": "1.146941235",
+          "ratio_Sigma1_over_S": "3.187593627e+34",
+          "ratio_B2_over_ITF": "1.016075313e+69",
+          "ratio_Fesp_over_Fsamp": "1.016075341e+69",
+          "eig_residual": "1.239229413e-118",
+          "orth_error": "3.291703128e-120",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "4.956917651e-119",
+          "n_distinct": 38,
+          "seconds": 8.841265439987183,
+          "Sigma1_vs_arb_reldiff": "1.451919033e-14",
+          "S_precision_reldiff": "7.692340887e-102",
+          "dps_trail": "[(60, '2.7619644e-41', 5.5), (120, '2.7619644e-41', 8.8), (140, '2.7619644e-41', 5.7)]",
+          "F_samp_meta": {
+            "T": 3569.9852525218494,
+            "dt": 0.0017849926262609246,
+            "n_terms": 28,
+            "dropped_rel_mass": 1.4044660996193236e-115,
+            "tau_star": 0.7853981624348955,
+            "amp_rel": 0.9999999862253812
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0010"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:37-03:00",
+      "timestamp_end": "2026-09-18T20:54:38-03:00",
+      "wallclock_seconds": 0.0,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 3,
+        "kappa": "0.5000",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 3,
+          "n": 6,
+          "D": 5,
+          "kappa": "1/2",
+          "dps": 60,
+          "S": "2.832953372e-9",
+          "ITF": "8.02562481e-18",
+          "Fbar": "1.981680309e-18",
+          "F_samp": "8.025517756e-18",
+          "Sigma1": "0.007284909582",
+          "F_esp": "5.306990761e-5",
+          "B2": "5.287677953e-5",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.1248699272",
+          "Sigma2": "2.643891402e-5",
+          "gamma_kappa": "0.9979610822",
+          "ratio_Sigma1_over_S": "2571489.405",
+          "ratio_B2_over_ITF": "6.588493829e+12",
+          "ratio_Fesp_over_Fsamp": "6.612645966e+12",
+          "eig_residual": "1.493523667e-59",
+          "orth_error": "1.555753819e-61",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 6,
+          "seconds": 0.030417680740356445,
+          "Sigma1_vs_arb_reldiff": "7.170988206e-15",
+          "S_float64": 2.8329533723517966e-09,
+          "S_float64_reldiff": "1.271285221e-13",
+          "dps_trail": "[(60, '2.8329534e-9', 0.0)]",
+          "F_samp_meta": {
+            "T": 123.22769450840212,
+            "dt": 0.006747634020885897,
+            "n_terms": 6,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23510149192619,
+            "amp_rel": 0.999993330469076
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0011"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:38-03:00",
+      "timestamp_end": "2026-09-18T20:54:38-03:00",
+      "wallclock_seconds": 0.1,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 5,
+        "kappa": "0.8565",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 5,
+          "n": 10,
+          "D": 9,
+          "kappa": "1713/2000",
+          "dps": 60,
+          "S": "1.785055833e-18",
+          "ITF": "3.186424327e-36",
+          "Fbar": "5.902424918e-37",
+          "F_samp": "3.186410857e-36",
+          "Sigma1": "0.0005476917161",
+          "F_esp": "2.999662159e-7",
+          "B2": "2.999662159e-7",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.07140495868",
+          "Sigma2": "1.295733282e-7",
+          "gamma_kappa": "1.369639535",
+          "ratio_Sigma1_over_S": "3.06820496e+14",
+          "ratio_B2_over_ITF": "9.413881678e+28",
+          "ratio_Fesp_over_Fsamp": "9.413921475e+28",
+          "eig_residual": "1.493523667e-59",
+          "orth_error": "7.778769097e-61",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 10,
+          "seconds": 0.09108114242553711,
+          "Sigma1_vs_arb_reldiff": "4.82467143e-14",
+          "dps_trail": "[(60, '1.7850558e-18', 0.1)]",
+          "F_samp_meta": {
+            "T": 123.22769450843819,
+            "dt": 0.003697799675375366,
+            "n_terms": 10,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23523528656955,
+            "amp_rel": 0.9999978862536869
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0012"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:38-03:00",
+      "timestamp_end": "2026-09-18T20:54:38-03:00",
+      "wallclock_seconds": 0.2,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 7,
+        "kappa": "0.8830",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 7,
+          "n": 14,
+          "D": 13,
+          "kappa": "883/1000",
+          "dps": 60,
+          "S": "1.997150501e-28",
+          "ITF": "3.988610125e-56",
+          "Fbar": "6.176382374e-57",
+          "F_samp": "3.988596507e-56",
+          "Sigma1": "1.720208813e-5",
+          "F_esp": "2.959118361e-10",
+          "B2": "2.959118361e-10",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.04999198846",
+          "Sigma2": "1.784974498e-10",
+          "gamma_kappa": "1.392452333",
+          "ratio_Sigma1_over_S": "8.613315882e+22",
+          "ratio_B2_over_ITF": "7.418921048e+45",
+          "ratio_Fesp_over_Fsamp": "7.418946378e+45",
+          "eig_residual": "3.982729778e-59",
+          "orth_error": "1.089027674e-60",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 14,
+          "seconds": 0.17278385162353516,
+          "Sigma1_vs_arb_reldiff": "2.41375301e-14",
+          "dps_trail": "[(60, '1.9971505e-28', 0.2)]",
+          "F_samp_meta": {
+            "T": 123.22769450843819,
+            "dt": 0.002546719005244508,
+            "n_terms": 14,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23524447765875,
+            "amp_rel": 0.9999982928437676
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0013"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:38-03:00",
+      "timestamp_end": "2026-09-18T20:54:39-03:00",
+      "wallclock_seconds": 1.1,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 9,
+        "kappa": "0.8739",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 9,
+          "n": 18,
+          "D": 17,
+          "kappa": "8739/10000",
+          "dps": 120,
+          "S": "6.727705197e-39",
+          "ITF": "4.526201722e-77",
+          "Fbar": "6.145003064e-78",
+          "F_samp": "4.526186513e-77",
+          "Sigma1": "1.982639535e-7",
+          "F_esp": "3.930859525e-14",
+          "B2": "3.930859525e-14",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.03845791309",
+          "Sigma2": "1.120205817e-14",
+          "gamma_kappa": "1.384677035",
+          "ratio_Sigma1_over_S": "2.946977427e+31",
+          "ratio_B2_over_ITF": "8.684675953e+62",
+          "ratio_Fesp_over_Fsamp": "8.684705136e+62",
+          "eig_residual": "9.913835302e-119",
+          "orth_error": "3.001258734e-120",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 18,
+          "seconds": 0.40841150283813477,
+          "Sigma1_vs_arb_reldiff": "1.292937932e-13",
+          "S_precision_reldiff": "9.786077241e-121",
+          "dps_trail": "[(60, '6.7277052e-39', 0.3), (120, '6.7277052e-39', 0.4), (140, '6.7277052e-39', 0.4)]",
+          "F_samp_meta": {
+            "T": 123.22769450843819,
+            "dt": 0.001942150772929055,
+            "n_terms": 18,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23524507832715,
+            "amp_rel": 0.9999983198793366
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0014"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:39-03:00",
+      "timestamp_end": "2026-09-18T20:54:41-03:00",
+      "wallclock_seconds": 2.1,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 12,
+        "kappa": "0.9006",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 12,
+          "n": 24,
+          "D": 23,
+          "kappa": "4503/5000",
+          "dps": 120,
+          "S": "2.474677319e-55",
+          "ITF": "6.124027831e-110",
+          "Fbar": "7.16340172e-111",
+          "F_samp": "6.124007275e-110",
+          "Sigma1": "9.190871869e-11",
+          "F_esp": "8.447212571e-21",
+          "B2": "8.447212571e-21",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.0285699498",
+          "Sigma2": "1.329112477e-21",
+          "gamma_kappa": "1.407320875",
+          "ratio_Sigma1_over_S": "3.713967797e+44",
+          "ratio_B2_over_ITF": "1.37935568e+89",
+          "ratio_Fesp_over_Fsamp": "1.37936031e+89",
+          "eig_residual": "1.734921178e-118",
+          "orth_error": "4.259851106e-120",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 24,
+          "seconds": 0.7641470432281494,
+          "Sigma1_vs_arb_reldiff": "7.184647267e-16",
+          "S_precision_reldiff": "2.941161237e-120",
+          "dps_trail": "[(60, '2.4746773e-55', 0.6), (120, '2.4746773e-55', 0.8), (140, '2.4746773e-55', 0.8)]",
+          "F_samp_meta": {
+            "T": 123.22769450843819,
+            "dt": 0.0014321731847654927,
+            "n_terms": 24,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23524511641943,
+            "amp_rel": 0.9999983216944357
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0015"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:41-03:00",
+      "timestamp_end": "2026-09-18T20:54:49-03:00",
+      "wallclock_seconds": 8.3,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "p4",
+        "k": 10,
+        "kappa": "0.8642",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "p4",
+          "k": 10,
+          "n": 40,
+          "D": 39,
+          "kappa": "4321/5000",
+          "dps": 120,
+          "S": "9.812144083e-44",
+          "ITF": "9.627817151e-87",
+          "Fbar": "8.78990349e-88",
+          "F_samp": "9.367623629e-87",
+          "Sigma1": "0.2473291402",
+          "F_esp": "0.06117170362",
+          "B2": "0.06117170362",
+          "b_eta2": "0.160926779",
+          "B_E2": "0.1566014161",
+          "Sigma2": "0.008220849264",
+          "gamma_kappa": "0.2243168735",
+          "ratio_Sigma1_over_S": "2.520643176e+42",
+          "ratio_B2_over_ITF": "6.35364202e+84",
+          "ratio_Fesp_over_Fsamp": "6.530119701e+84",
+          "eig_residual": "2.633362502e-119",
+          "orth_error": "4.647110298e-120",
+          "min_group_gap": "0.9959323043",
+          "max_within_group": "0.0",
+          "n_distinct": 40,
+          "seconds": 2.960216999053955,
+          "Sigma1_vs_arb_reldiff": "1.924955955e-13",
+          "S_precision_reldiff": "9.830337278e-120",
+          "dps_trail": "[(60, '9.8121441e-44', 2.4), (120, '9.8121441e-44', 3.0), (140, '9.8121441e-44', 3.0)]",
+          "F_samp_meta": {
+            "T": 1256.9515415396168,
+            "dt": 0.010271476185361787,
+            "n_terms": 32,
+            "dropped_rel_mass": 2.139844073880887e-08,
+            "tau_star": 1185.0087489412147,
+            "amp_rel": 0.9863948798810072
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0016"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:54:49-03:00",
+      "timestamp_end": "2026-09-18T20:55:49-03:00",
+      "wallclock_seconds": 59.6,
+      "peak_memory_mb": 388.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "p4",
+        "k": 20,
+        "kappa": "0.8951",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "p4",
+          "k": 20,
+          "n": 80,
+          "D": 79,
+          "kappa": "8951/10000",
+          "dps": 171,
+          "S": "1.917985172e-111",
+          "ITF": "3.678667121e-222",
+          "Fbar": "2.366663181e-223",
+          "F_samp": "3.579250539e-222",
+          "Sigma1": "0.0007448353472",
+          "F_esp": "5.547796944e-7",
+          "B2": "5.547796944e-7",
+          "b_eta2": "0.160926779",
+          "B_E2": "0.07917559433",
+          "Sigma2": "5.446516563e-8",
+          "gamma_kappa": "0.2314758518",
+          "ratio_Sigma1_over_S": "3.883425993e+107",
+          "ratio_B2_over_ITF": "1.508099744e+215",
+          "ratio_Fesp_over_Fsamp": "1.549988436e+215",
+          "eig_residual": "9.108463766e-170",
+          "orth_error": "1.138557971e-170",
+          "min_group_gap": "0.9959323043",
+          "max_within_group": "0.0",
+          "n_distinct": 80,
+          "seconds": 21.594637870788574,
+          "Sigma1_vs_arb_reldiff": "5.013700466e-14",
+          "S_precision_reldiff": "4.664007413e-170",
+          "dps_trail": "[(60, '1.9179852e-111', 15.2), (171, '1.9179852e-111', 21.6), (191, '1.9179852e-111', 22.8)]",
+          "F_samp_meta": {
+            "T": 1256.9515415396256,
+            "dt": 0.0067436989823173015,
+            "n_terms": 48,
+            "dropped_rel_mass": 1.749136630597598e-08,
+            "tau_star": 1185.00874892391,
+            "amp_rel": 0.9863948856725487
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0017"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:55:49-03:00",
+      "timestamp_end": "2026-09-18T21:07:17-03:00",
+      "wallclock_seconds": 687.8,
+      "peak_memory_mb": 556.8,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "p4",
+        "k": 40,
+        "kappa": "0.9453",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": ""
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "p4",
+          "k": 40,
+          "n": 160,
+          "D": 159,
+          "kappa": "9453/10000",
+          "dps": 331,
+          "S": "4.322544628e-271",
+          "ITF": "1.868439206e-541",
+          "Fbar": "8.480345698e-543",
+          "F_samp": "1.817944338e-541",
+          "Sigma1": "1.289035324e-11",
+          "F_esp": "1.661612067e-22",
+          "B2": "1.661612067e-22",
+          "b_eta2": "0.160926779",
+          "B_E2": "0.03979697482",
+          "Sigma2": "5.709506252e-24",
+          "gamma_kappa": "0.2429981265",
+          "ratio_Sigma1_over_S": "2.982121494e+259",
+          "ratio_B2_over_ITF": "8.893048604e+518",
+          "ratio_Fesp_over_Fsamp": "9.140060188e+518",
+          "eig_residual": "3.533832878e-329",
+          "orth_error": "1.546051884e-330",
+          "min_group_gap": "0.9959323043",
+          "max_within_group": "0.0",
+          "n_distinct": 160,
+          "seconds": 287.6999547481537,
+          "Sigma1_vs_arb_reldiff": "4.842893195e-14",
+          "S_precision_reldiff": "1.321241761e-329",
+          "dps_trail": "[(60, '4.3225446e-271', 113.9), (331, '4.3225446e-271', 287.7), (351, '4.3225446e-271', 286.2)]",
+          "F_samp_meta": {
+            "T": 1256.9515415396256,
+            "dt": 0.004553956782124748,
+            "n_terms": 70,
+            "dropped_rel_mass": 1.635611940057778e-08,
+            "tau_star": 1185.0087489249179,
+            "amp_rel": 0.9863948868006776
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0018"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:07:47-03:00",
+      "timestamp_end": "2026-09-18T21:07:49-03:00",
+      "wallclock_seconds": 1.4,
+      "peak_memory_mb": 153.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 3,
+        "kappa": "0.5000",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 3,
+          "n": 12,
+          "D": 5,
+          "kappa": "1/2",
+          "dps": 60,
+          "S": "2.341349522e-8",
+          "ITF": "5.481917585e-16",
+          "Fbar": "1.067674249e-16",
+          "F_samp": "5.481917469e-16",
+          "Sigma1": "0.01007550314",
+          "F_esp": "0.0001015157636",
+          "B2": "0.0001010049997",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.2653061224",
+          "Sigma2": "5.050441282e-5",
+          "gamma_kappa": "0.8053591712",
+          "ratio_Sigma1_over_S": "430328.8786",
+          "ratio_B2_over_ITF": "1.842512189e+11",
+          "ratio_Fesp_over_Fsamp": "1.851829477e+11",
+          "eig_residual": "1.991364889e-59",
+          "orth_error": "7.778769097e-61",
+          "min_group_gap": "0.0002833797761",
+          "max_within_group": "1.493523667e-59",
+          "n_distinct": 10,
+          "seconds": 1.432373046875,
+          "Sigma1_vs_arb_reldiff": "3.50877193e-16",
+          "S_float64": 2.3413495226267152e-08,
+          "S_float64_reldiff": "1.609986123e-10",
+          "dps_trail": "[(60, '2.3413495e-8', 1.4)]",
+          "F_samp_meta": {
+            "T": 15103.696291819475,
+            "dt": 0.007551848145909737,
+            "n_terms": 7,
+            "dropped_rel_mass": 4.206834773488394e-57,
+            "tau_star": 0.7853913452675159,
+            "amp_rel": 0.9999999894192755
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0019"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:07:49-03:00",
+      "timestamp_end": "2026-09-18T21:07:51-03:00",
+      "wallclock_seconds": 1.8,
+      "peak_memory_mb": 177.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 4,
+        "kappa": "0.5000",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 4,
+          "n": 16,
+          "D": 7,
+          "kappa": "1/2",
+          "dps": 60,
+          "S": "1.510172387e-12",
+          "ITF": "2.28062064e-24",
+          "Fbar": "3.534194595e-25",
+          "F_samp": "2.280620578e-24",
+          "Sigma1": "0.01010075503",
+          "F_esp": "0.0001020252522",
+          "B2": "0.0001010049997",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.19",
+          "Sigma2": "5.050505047e-5",
+          "gamma_kappa": "0.8053591712",
+          "ratio_Sigma1_over_S": "6688478160.0",
+          "ratio_B2_over_ITF": "4.42883827e+19",
+          "ratio_Fesp_over_Fsamp": "4.473574131e+19",
+          "eig_residual": "3.982729778e-59",
+          "orth_error": "1.244603056e-60",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "3.982729778e-59",
+          "n_distinct": 14,
+          "seconds": 1.7704946994781494,
+          "Sigma1_vs_arb_reldiff": "1.386e-13",
+          "dps_trail": "[(60, '1.5101724e-12', 1.8)]",
+          "F_samp_meta": {
+            "T": 10334.13273785957,
+            "dt": 0.005167066368929786,
+            "n_terms": 10,
+            "dropped_rel_mass": 2.5115933330661208e-57,
+            "tau_star": 0.7853958720498826,
+            "amp_rel": 0.9999999865150215
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0020"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:07:51-03:00",
+      "timestamp_end": "2026-09-18T21:07:53-03:00",
+      "wallclock_seconds": 2.2,
+      "peak_memory_mb": 200.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 5,
+        "kappa": "0.8440",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "kappa": "211/250",
+          "dps": 60,
+          "S": "5.745261979e-17",
+          "ITF": "3.300803521e-33",
+          "Fbar": "4.5793435e-34",
+          "F_samp": "3.30080343e-33",
+          "Sigma1": "0.003587488488",
+          "F_esp": "1.287007365e-5",
+          "B2": "1.287007365e-5",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.1479289941",
+          "Sigma2": "6.168046692e-6",
+          "gamma_kappa": "1.12781504",
+          "ratio_Sigma1_over_S": "6.244255703e+13",
+          "ratio_B2_over_ITF": "3.899072929e+27",
+          "ratio_Fesp_over_Fsamp": "3.899073037e+27",
+          "eig_residual": "2.489206111e-59",
+          "orth_error": "1.866904583e-60",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "3.982729778e-59",
+          "n_distinct": 18,
+          "seconds": 2.2288947105407715,
+          "Sigma1_vs_arb_reldiff": "6.913422759e-14",
+          "dps_trail": "[(60, '5.745262e-17', 2.2)]",
+          "F_samp_meta": {
+            "T": 7853.950661502993,
+            "dt": 0.003926975330751497,
+            "n_terms": 13,
+            "dropped_rel_mass": 3.2938361717170794e-57,
+            "tau_star": 0.785397469371023,
+            "amp_rel": 0.9999999861897075
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0021"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:07:55-03:00",
+      "timestamp_end": "2026-09-18T21:07:57-03:00",
+      "wallclock_seconds": 2.1,
+      "peak_memory_mb": 153.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 3,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 3,
+          "n": 12,
+          "D": 5,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "1/2",
+          "gamma_kappa": "0.80535917",
+          "ITF": "5.4819176e-16",
+          "Fbar": "1.0676742e-16",
+          "F_samp": "5.4819175e-16",
+          "Sigma1_sq": "1.0151576e-4",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.26530612",
+          "B2": "1.01005e-4",
+          "ratio_B2_over_ITF": "1.8425122e+11",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0022"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:07:53-03:00",
+      "timestamp_end": "2026-09-18T21:07:57-03:00",
+      "wallclock_seconds": 4.1,
+      "peak_memory_mb": 223.7,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 6,
+        "kappa": "0.8712",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 6,
+          "n": 24,
+          "D": 11,
+          "kappa": "1089/1250",
+          "dps": 60,
+          "S": "1.437919977e-21",
+          "ITF": "2.06761386e-42",
+          "Fbar": "2.598151884e-43",
+          "F_samp": "2.067613803e-42",
+          "Sigma1": "0.0004278169628",
+          "F_esp": "1.830273537e-7",
+          "B2": "1.830273537e-7",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.12109375",
+          "Sigma2": "6.599458022e-8",
+          "gamma_kappa": "1.149375109",
+          "ratio_Sigma1_over_S": "2.97524876e+17",
+          "ratio_B2_over_ITF": "8.852105182e+34",
+          "ratio_Fesp_over_Fsamp": "8.852105426e+34",
+          "eig_residual": "4.480571e-59",
+          "orth_error": "2.178055347e-60",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "8.961142e-59",
+          "n_distinct": 22,
+          "seconds": 4.084966421127319,
+          "Sigma1_vs_arb_reldiff": "7.016043723e-15",
+          "dps_trail": "[(60, '1.43792e-21', 4.1)]",
+          "F_samp_meta": {
+            "T": 6333.836013028896,
+            "dt": 0.0031669180065144477,
+            "n_terms": 16,
+            "dropped_rel_mass": 1.9475147602260245e-56,
+            "tau_star": 0.7853979634357606,
+            "amp_rel": 0.9999999862007594
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0023"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:07:57-03:00",
+      "timestamp_end": "2026-09-18T21:07:59-03:00",
+      "wallclock_seconds": 2.6,
+      "peak_memory_mb": 177.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 4,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 4,
+          "n": 16,
+          "D": 7,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "1/2",
+          "gamma_kappa": "0.80535917",
+          "ITF": "2.2806206e-24",
+          "Fbar": "3.5341946e-25",
+          "F_samp": "2.2806206e-24",
+          "Sigma1_sq": "1.0202525e-4",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.19",
+          "B2": "1.01005e-4",
+          "ratio_B2_over_ITF": "4.4288383e+19",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0024"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:07:59-03:00",
+      "timestamp_end": "2026-09-18T21:08:03-03:00",
+      "wallclock_seconds": 3.3,
+      "peak_memory_mb": 200.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "211/250"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "211/250",
+          "gamma_kappa": "1.127815",
+          "ITF": "3.3008035e-33",
+          "Fbar": "4.5793435e-34",
+          "F_samp": "3.3008034e-33",
+          "Sigma1_sq": "1.2870074e-5",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.14792899",
+          "B2": "1.2870074e-5",
+          "ratio_B2_over_ITF": "3.8990729e+27",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0025"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:03-03:00",
+      "timestamp_end": "2026-09-18T21:08:06-03:00",
+      "wallclock_seconds": 3.6,
+      "peak_memory_mb": 223.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 6,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "871/1000"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 6,
+          "n": 24,
+          "D": 11,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "871/1000",
+          "gamma_kappa": "1.1492183",
+          "ITF": "2.0676139e-42",
+          "Fbar": "2.5981519e-43",
+          "F_samp": "2.0676138e-42",
+          "Sigma1_sq": "1.8302797e-7",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.12109375",
+          "B2": "1.8302797e-7",
+          "ratio_B2_over_ITF": "8.852135e+34",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0026"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:06-03:00",
+      "timestamp_end": "2026-09-18T21:08:11-03:00",
+      "wallclock_seconds": 4.7,
+      "peak_memory_mb": 246.7,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 7,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "879/1000"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 7,
+          "n": 28,
+          "D": 13,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "879/1000",
+          "gamma_kappa": "1.155473",
+          "ITF": "6.4749363e-52",
+          "Fbar": "7.5112216e-53",
+          "F_samp": "6.4749362e-52",
+          "Sigma1_sq": "6.5581136e-9",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.10249307",
+          "B2": "6.5581136e-9",
+          "ratio_B2_over_ITF": "1.012846e+43",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0027"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:07:57-03:00",
+      "timestamp_end": "2026-09-18T21:08:14-03:00",
+      "wallclock_seconds": 16.6,
+      "peak_memory_mb": 261.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 8,
+        "kappa": "0.8615",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 8,
+          "n": 32,
+          "D": 15,
+          "kappa": "1723/2000",
+          "dps": 120,
+          "S": "3.350593112e-31",
+          "ITF": "1.12264742e-61",
+          "Fbar": "1.214601316e-62",
+          "F_samp": "1.122647389e-61",
+          "Sigma1": "2.352572959e-5",
+          "F_esp": "5.534599527e-10",
+          "B2": "5.534599527e-10",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.08884297521",
+          "Sigma2": "1.667682356e-10",
+          "gamma_kappa": "1.141739624",
+          "ratio_Sigma1_over_S": "7.021362727e+25",
+          "ratio_B2_over_ITF": "4.929953454e+51",
+          "ratio_Fesp_over_Fsamp": "4.92995359e+51",
+          "eig_residual": "9.913835302e-119",
+          "orth_error": "2.129925553e-120",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "7.435376477e-119",
+          "n_distinct": 30,
+          "seconds": 5.459817886352539,
+          "Sigma1_vs_arb_reldiff": "1.194933899e-13",
+          "S_precision_reldiff": "4.903878313e-102",
+          "dps_trail": "[(60, '3.3505931e-31', 5.7), (120, '3.3505931e-31', 5.5), (140, '3.3505931e-31', 5.5)]",
+          "F_samp_meta": {
+            "T": 4566.257922496448,
+            "dt": 0.002283128961248224,
+            "n_terms": 22,
+            "dropped_rel_mass": 1.52765997574923e-116,
+            "tau_star": 0.785398148208339,
+            "amp_rel": 0.9999999862231204
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0028"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:11-03:00",
+      "timestamp_end": "2026-09-18T21:08:27-03:00",
+      "wallclock_seconds": 15.7,
+      "peak_memory_mb": 265.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 8,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "431/500"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 8,
+          "n": 32,
+          "D": 15,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "431/500",
+          "gamma_kappa": "1.1421346",
+          "ITF": "1.1226474e-61",
+          "Fbar": "1.2146013e-62",
+          "F_samp": "1.1226474e-61",
+          "Sigma1_sq": "5.5346677e-10",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.088842975",
+          "B2": "5.5346677e-10",
+          "ratio_B2_over_ITF": "4.9300142e+51",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0029"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:14-03:00",
+      "timestamp_end": "2026-09-18T21:08:37-03:00",
+      "wallclock_seconds": 23.3,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "cliques",
+        "k": 10,
+        "kappa": "0.8681",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "cliques",
+          "k": 10,
+          "n": 40,
+          "D": 19,
+          "kappa": "8681/10000",
+          "dps": 120,
+          "S": "2.761964362e-41",
+          "ITF": "7.628447136e-82",
+          "Fbar": "7.352270026e-83",
+          "F_samp": "7.628446926e-82",
+          "Sigma1": "8.804019996e-7",
+          "F_esp": "7.75107681e-13",
+          "B2": "7.75107681e-13",
+          "b_eta2": "0.0001010049997",
+          "B_E2": "0.07015306122",
+          "Sigma2": "2.227136717e-13",
+          "gamma_kappa": "1.146941235",
+          "ratio_Sigma1_over_S": "3.187593627e+34",
+          "ratio_B2_over_ITF": "1.016075313e+69",
+          "ratio_Fesp_over_Fsamp": "1.016075341e+69",
+          "eig_residual": "1.239229413e-118",
+          "orth_error": "3.291703128e-120",
+          "min_group_gap": "0.0002833797759",
+          "max_within_group": "4.956917651e-119",
+          "n_distinct": 38,
+          "seconds": 7.657546043395996,
+          "Sigma1_vs_arb_reldiff": "1.451919033e-14",
+          "S_precision_reldiff": "7.692340887e-102",
+          "dps_trail": "[(60, '2.7619644e-41', 7.1), (120, '2.7619644e-41', 7.7), (140, '2.7619644e-41', 8.5)]",
+          "F_samp_meta": {
+            "T": 3569.9852525218494,
+            "dt": 0.0017849926262609246,
+            "n_terms": 28,
+            "dropped_rel_mass": 1.4044660996193236e-115,
+            "tau_star": 0.7853981624348955,
+            "amp_rel": 0.9999999862253812
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0030"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:37-03:00",
+      "timestamp_end": "2026-09-18T21:08:37-03:00",
+      "wallclock_seconds": 0.1,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 3,
+        "kappa": "0.5000",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 3,
+          "n": 6,
+          "D": 5,
+          "kappa": "1/2",
+          "dps": 60,
+          "S": "2.832953372e-9",
+          "ITF": "8.02562481e-18",
+          "Fbar": "1.981680309e-18",
+          "F_samp": "8.025517756e-18",
+          "Sigma1": "0.007284909582",
+          "F_esp": "5.306990761e-5",
+          "B2": "5.287677953e-5",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.1248699272",
+          "Sigma2": "2.643891402e-5",
+          "gamma_kappa": "0.9979610822",
+          "ratio_Sigma1_over_S": "2571489.405",
+          "ratio_B2_over_ITF": "6.588493829e+12",
+          "ratio_Fesp_over_Fsamp": "6.612645966e+12",
+          "eig_residual": "1.493523667e-59",
+          "orth_error": "1.555753819e-61",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 6,
+          "seconds": 0.05514788627624512,
+          "Sigma1_vs_arb_reldiff": "7.170988206e-15",
+          "S_float64": 2.8329533723517966e-09,
+          "S_float64_reldiff": "1.271285221e-13",
+          "dps_trail": "[(60, '2.8329534e-9', 0.1)]",
+          "F_samp_meta": {
+            "T": 123.22769450840212,
+            "dt": 0.006747634020885897,
+            "n_terms": 6,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23510149192619,
+            "amp_rel": 0.999993330469076
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0031"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:37-03:00",
+      "timestamp_end": "2026-09-18T21:08:37-03:00",
+      "wallclock_seconds": 0.1,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 5,
+        "kappa": "0.8565",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 5,
+          "n": 10,
+          "D": 9,
+          "kappa": "1713/2000",
+          "dps": 60,
+          "S": "1.785055833e-18",
+          "ITF": "3.186424327e-36",
+          "Fbar": "5.902424918e-37",
+          "F_samp": "3.186410857e-36",
+          "Sigma1": "0.0005476917161",
+          "F_esp": "2.999662159e-7",
+          "B2": "2.999662159e-7",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.07140495868",
+          "Sigma2": "1.295733282e-7",
+          "gamma_kappa": "1.369639535",
+          "ratio_Sigma1_over_S": "3.06820496e+14",
+          "ratio_B2_over_ITF": "9.413881678e+28",
+          "ratio_Fesp_over_Fsamp": "9.413921475e+28",
+          "eig_residual": "1.493523667e-59",
+          "orth_error": "7.778769097e-61",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 10,
+          "seconds": 0.12237906455993652,
+          "Sigma1_vs_arb_reldiff": "4.82467143e-14",
+          "dps_trail": "[(60, '1.7850558e-18', 0.1)]",
+          "F_samp_meta": {
+            "T": 123.22769450843819,
+            "dt": 0.003697799675375366,
+            "n_terms": 10,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23523528656955,
+            "amp_rel": 0.9999978862536869
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0032"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:37-03:00",
+      "timestamp_end": "2026-09-18T21:08:37-03:00",
+      "wallclock_seconds": 0.2,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 7,
+        "kappa": "0.8830",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 7,
+          "n": 14,
+          "D": 13,
+          "kappa": "883/1000",
+          "dps": 60,
+          "S": "1.997150501e-28",
+          "ITF": "3.988610125e-56",
+          "Fbar": "6.176382374e-57",
+          "F_samp": "3.988596507e-56",
+          "Sigma1": "1.720208813e-5",
+          "F_esp": "2.959118361e-10",
+          "B2": "2.959118361e-10",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.04999198846",
+          "Sigma2": "1.784974498e-10",
+          "gamma_kappa": "1.392452333",
+          "ratio_Sigma1_over_S": "8.613315882e+22",
+          "ratio_B2_over_ITF": "7.418921048e+45",
+          "ratio_Fesp_over_Fsamp": "7.418946378e+45",
+          "eig_residual": "3.982729778e-59",
+          "orth_error": "1.089027674e-60",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 14,
+          "seconds": 0.21752572059631348,
+          "Sigma1_vs_arb_reldiff": "2.41375301e-14",
+          "dps_trail": "[(60, '1.9971505e-28', 0.2)]",
+          "F_samp_meta": {
+            "T": 123.22769450843819,
+            "dt": 0.002546719005244508,
+            "n_terms": 14,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23524447765875,
+            "amp_rel": 0.9999982928437676
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0033"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:37-03:00",
+      "timestamp_end": "2026-09-18T21:08:39-03:00",
+      "wallclock_seconds": 1.5,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 9,
+        "kappa": "0.8739",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 9,
+          "n": 18,
+          "D": 17,
+          "kappa": "8739/10000",
+          "dps": 120,
+          "S": "6.727705197e-39",
+          "ITF": "4.526201722e-77",
+          "Fbar": "6.145003064e-78",
+          "F_samp": "4.526186513e-77",
+          "Sigma1": "1.982639535e-7",
+          "F_esp": "3.930859525e-14",
+          "B2": "3.930859525e-14",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.03845791309",
+          "Sigma2": "1.120205817e-14",
+          "gamma_kappa": "1.384677035",
+          "ratio_Sigma1_over_S": "2.946977427e+31",
+          "ratio_B2_over_ITF": "8.684675953e+62",
+          "ratio_Fesp_over_Fsamp": "8.684705136e+62",
+          "eig_residual": "9.913835302e-119",
+          "orth_error": "3.001258734e-120",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 18,
+          "seconds": 0.525653600692749,
+          "Sigma1_vs_arb_reldiff": "1.292937932e-13",
+          "S_precision_reldiff": "9.786077241e-121",
+          "dps_trail": "[(60, '6.7277052e-39', 0.4), (120, '6.7277052e-39', 0.5), (140, '6.7277052e-39', 0.6)]",
+          "F_samp_meta": {
+            "T": 123.22769450843819,
+            "dt": 0.001942150772929055,
+            "n_terms": 18,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23524507832715,
+            "amp_rel": 0.9999983198793366
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0034"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:39-03:00",
+      "timestamp_end": "2026-09-18T21:08:41-03:00",
+      "wallclock_seconds": 2.5,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "dimer",
+        "k": 12,
+        "kappa": "0.9006",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "dimer",
+          "k": 12,
+          "n": 24,
+          "D": 23,
+          "kappa": "4503/5000",
+          "dps": 120,
+          "S": "2.474677319e-55",
+          "ITF": "6.124027831e-110",
+          "Fbar": "7.16340172e-111",
+          "F_samp": "6.124007275e-110",
+          "Sigma1": "9.190871869e-11",
+          "F_esp": "8.447212571e-21",
+          "B2": "8.447212571e-21",
+          "b_eta2": "5.287677953e-5",
+          "B_E2": "0.0285699498",
+          "Sigma2": "1.329112477e-21",
+          "gamma_kappa": "1.407320875",
+          "ratio_Sigma1_over_S": "3.713967797e+44",
+          "ratio_B2_over_ITF": "1.37935568e+89",
+          "ratio_Fesp_over_Fsamp": "1.37936031e+89",
+          "eig_residual": "1.734921178e-118",
+          "orth_error": "4.259851106e-120",
+          "min_group_gap": "10.19768378",
+          "max_within_group": "0.0",
+          "n_distinct": 24,
+          "seconds": 0.8951427936553955,
+          "Sigma1_vs_arb_reldiff": "7.184647267e-16",
+          "S_precision_reldiff": "2.941161237e-120",
+          "dps_trail": "[(60, '2.4746773e-55', 0.7), (120, '2.4746773e-55', 0.9), (140, '2.4746773e-55', 0.9)]",
+          "F_samp_meta": {
+            "T": 123.22769450843819,
+            "dt": 0.0014321731847654927,
+            "n_terms": 24,
+            "dropped_rel_mass": 0.0,
+            "tau_star": 66.23524511641943,
+            "amp_rel": 0.9999983216944357
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0035"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:27-03:00",
+      "timestamp_end": "2026-09-18T21:08:45-03:00",
+      "wallclock_seconds": 18.2,
+      "peak_memory_mb": 284.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 9,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "429/500"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 9,
+          "n": 36,
+          "D": 17,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "429/500",
+          "gamma_kappa": "1.1389702",
+          "ITF": "1.1627314e-71",
+          "Fbar": "1.1834295e-72",
+          "F_samp": "1.1627314e-71",
+          "Sigma1_sq": "3.0524684e-11",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.0784",
+          "B2": "3.0524684e-11",
+          "ratio_B2_over_ITF": "2.6252567e+60",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0036"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:41-03:00",
+      "timestamp_end": "2026-09-18T21:08:54-03:00",
+      "wallclock_seconds": 12.7,
+      "peak_memory_mb": 298.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "p4",
+        "k": 10,
+        "kappa": "0.8642",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "p4",
+          "k": 10,
+          "n": 40,
+          "D": 39,
+          "kappa": "4321/5000",
+          "dps": 120,
+          "S": "9.812144083e-44",
+          "ITF": "9.627817151e-87",
+          "Fbar": "8.78990349e-88",
+          "F_samp": "9.367623629e-87",
+          "Sigma1": "0.2473291402",
+          "F_esp": "0.06117170362",
+          "B2": "0.06117170362",
+          "b_eta2": "0.160926779",
+          "B_E2": "0.1566014161",
+          "Sigma2": "0.008220849264",
+          "gamma_kappa": "0.2243168735",
+          "ratio_Sigma1_over_S": "2.520643176e+42",
+          "ratio_B2_over_ITF": "6.35364202e+84",
+          "ratio_Fesp_over_Fsamp": "6.530119701e+84",
+          "eig_residual": "2.633362502e-119",
+          "orth_error": "4.647110298e-120",
+          "min_group_gap": "0.9959323043",
+          "max_within_group": "0.0",
+          "n_distinct": 40,
+          "seconds": 4.285809278488159,
+          "Sigma1_vs_arb_reldiff": "1.924955955e-13",
+          "S_precision_reldiff": "9.830337278e-120",
+          "dps_trail": "[(60, '9.8121441e-44', 3.7), (120, '9.8121441e-44', 4.3), (140, '9.8121441e-44', 4.7)]",
+          "F_samp_meta": {
+            "T": 1256.9515415396168,
+            "dt": 0.010271476185361787,
+            "n_terms": 32,
+            "dropped_rel_mass": 2.139844073880887e-08,
+            "tau_star": 1185.0087489412147,
+            "amp_rel": 0.9863948798810072
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0037"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:45-03:00",
+      "timestamp_end": "2026-09-18T21:09:06-03:00",
+      "wallclock_seconds": 20.6,
+      "peak_memory_mb": 302.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 10,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "217/250"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 10,
+          "n": 40,
+          "D": 19,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "217/250",
+          "gamma_kappa": "1.1468626",
+          "ITF": "7.6284471e-82",
+          "Fbar": "7.35227e-83",
+          "F_samp": "7.6284469e-82",
+          "Sigma1_sq": "7.7510938e-13",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.070153061",
+          "B2": "7.7510938e-13",
+          "ratio_B2_over_ITF": "1.0160775e+69",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0038"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:09:06-03:00",
+      "timestamp_end": "2026-09-18T21:09:32-03:00",
+      "wallclock_seconds": 26.1,
+      "peak_memory_mb": 321.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 11,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "439/500"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 11,
+          "n": 44,
+          "D": 21,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "439/500",
+          "gamma_kappa": "1.1546933",
+          "ITF": "3.3220063e-92",
+          "Fbar": "3.0481057e-93",
+          "F_samp": "3.3220062e-92",
+          "Sigma1_sq": "1.4471276e-14",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.063475546",
+          "B2": "1.4471276e-14",
+          "ratio_B2_over_ITF": "4.3561854e+77",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0039"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:09:32-03:00",
+      "timestamp_end": "2026-09-18T21:10:07-03:00",
+      "wallclock_seconds": 35.2,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "a",
+        "family": "cliques",
+        "k": 12,
+        "Delta_mod": "24",
+        "g_over_2delta": "",
+        "kappa": "887/1000"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "a",
+          "k": 12,
+          "n": 48,
+          "D": 23,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "887/1000",
+          "gamma_kappa": "1.1616888",
+          "ITF": "9.9746578e-103",
+          "Fbar": "8.7513539e-104",
+          "F_samp": "9.9746575e-103",
+          "Sigma1_sq": "2.2668665e-16",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.057958478",
+          "B2": "2.2668665e-16",
+          "ratio_B2_over_ITF": "2.2726259e+86",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0040"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:07-03:00",
+      "timestamp_end": "2026-09-18T21:10:10-03:00",
+      "wallclock_seconds": 3.2,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "24",
+        "g_over_2delta": "100",
+        "kappa": "211/250"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 24.0,
+          "g_over_2delta": 100.0,
+          "eta": "5.0251256e-3",
+          "kappa": "211/250",
+          "gamma_kappa": "1.127815",
+          "ITF": "3.3008035e-33",
+          "Fbar": "4.5793435e-34",
+          "F_samp": "3.3008034e-33",
+          "Sigma1_sq": "1.2870074e-5",
+          "b_eta2": "1.01005e-4",
+          "B_E2": "0.14792899",
+          "B2": "1.2870074e-5",
+          "ratio_B2_over_ITF": "3.8990729e+27",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0041"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:10-03:00",
+      "timestamp_end": "2026-09-18T21:10:13-03:00",
+      "wallclock_seconds": 3.0,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "10",
+        "g_over_2delta": "30",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 10.0,
+          "g_over_2delta": 30.0,
+          "eta": "0.016949153",
+          "kappa": "1/2",
+          "gamma_kappa": "0.30932125",
+          "ITF": "6.0037738e-27",
+          "Fbar": "8.3852044e-28",
+          "F_samp": "5.9068213e-27",
+          "Sigma1_sq": "1.2082664e-3",
+          "b_eta2": "1.148765e-3",
+          "B_E2": "0.30555556",
+          "B2": "1.148765e-3",
+          "ratio_B2_over_ITF": "1.9134048e+23",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0042"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:13-03:00",
+      "timestamp_end": "2026-09-18T21:10:16-03:00",
+      "wallclock_seconds": 3.1,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "6",
+        "g_over_2delta": "10",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 6.0,
+          "g_over_2delta": 10.0,
+          "eta": "0.052631579",
+          "kappa": "1/2",
+          "gamma_kappa": "0.10660974",
+          "ITF": "6.2728362e-23",
+          "Fbar": "8.9783376e-24",
+          "F_samp": "6.0444582e-23",
+          "Sigma1_sq": "0.012898919",
+          "b_eta2": "0.011049639",
+          "B_E2": "0.4375",
+          "B2": "0.011049639",
+          "ratio_B2_over_ITF": "1.7615061e+20",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0043"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:16-03:00",
+      "timestamp_end": "2026-09-18T21:10:19-03:00",
+      "wallclock_seconds": 3.1,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "5",
+        "g_over_2delta": "5",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 5.0,
+          "g_over_2delta": 5.0,
+          "eta": "0.11111111",
+          "kappa": "1/2",
+          "gamma_kappa": "0.048790164",
+          "ITF": "3.3047747e-21",
+          "Fbar": "4.89651e-22",
+          "F_samp": "3.2784242e-21",
+          "Sigma1_sq": "0.067215364",
+          "b_eta2": "0.048773053",
+          "B_E2": "0.48979592",
+          "B2": "0.048773053",
+          "ratio_B2_over_ITF": "1.4758359e+19",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0044"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:19-03:00",
+      "timestamp_end": "2026-09-18T21:10:22-03:00",
+      "wallclock_seconds": 3.0,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "23/5",
+        "g_over_2delta": "3",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 4.6,
+          "g_over_2delta": 3.0,
+          "eta": "0.2",
+          "kappa": "1/2",
+          "gamma_kappa": "0.024692613",
+          "ITF": "3.0246774e-20",
+          "Fbar": "4.6490537e-21",
+          "F_samp": "3.0190635e-20",
+          "Sigma1_sq": "0.2704",
+          "b_eta2": "0.1536",
+          "B_E2": "0.51423324",
+          "B2": "0.1536",
+          "ratio_B2_over_ITF": "5.0782275e+18",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0045"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:22-03:00",
+      "timestamp_end": "2026-09-18T21:10:25-03:00",
+      "wallclock_seconds": 3.1,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "22/5",
+        "g_over_2delta": "2",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 4.4,
+          "g_over_2delta": 2.0,
+          "eta": "0.33333333",
+          "kappa": "1/2",
+          "gamma_kappa": "0.01242252",
+          "ITF": "1.2729317e-19",
+          "Fbar": "2.022574e-20",
+          "F_samp": "1.2682601e-19",
+          "Sigma1_sq": 1,
+          "b_eta2": "0.39506173",
+          "B_E2": "0.52734375",
+          "B2": "0.39506173",
+          "ratio_B2_over_ITF": "3.103558e+18",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0046"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:08:54-03:00",
+      "timestamp_end": "2026-09-18T21:10:26-03:00",
+      "wallclock_seconds": 91.5,
+      "peak_memory_mb": 388.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "p4",
+        "k": 20,
+        "kappa": "0.8951",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "p4",
+          "k": 20,
+          "n": 80,
+          "D": 79,
+          "kappa": "8951/10000",
+          "dps": 171,
+          "S": "1.917985172e-111",
+          "ITF": "3.678667121e-222",
+          "Fbar": "2.366663181e-223",
+          "F_samp": "3.579250539e-222",
+          "Sigma1": "0.0007448353472",
+          "F_esp": "5.547796944e-7",
+          "B2": "5.547796944e-7",
+          "b_eta2": "0.160926779",
+          "B_E2": "0.07917559433",
+          "Sigma2": "5.446516563e-8",
+          "gamma_kappa": "0.2314758518",
+          "ratio_Sigma1_over_S": "3.883425993e+107",
+          "ratio_B2_over_ITF": "1.508099744e+215",
+          "ratio_Fesp_over_Fsamp": "1.549988436e+215",
+          "eig_residual": "9.108463766e-170",
+          "orth_error": "1.138557971e-170",
+          "min_group_gap": "0.9959323043",
+          "max_within_group": "0.0",
+          "n_distinct": 80,
+          "seconds": 29.37780451774597,
+          "Sigma1_vs_arb_reldiff": "5.013700466e-14",
+          "S_precision_reldiff": "4.664007413e-170",
+          "dps_trail": "[(60, '1.9179852e-111', 24.4), (171, '1.9179852e-111', 29.4), (191, '1.9179852e-111', 37.7)]",
+          "F_samp_meta": {
+            "T": 1256.9515415396256,
+            "dt": 0.0067436989823173015,
+            "n_terms": 48,
+            "dropped_rel_mass": 1.749136630597598e-08,
+            "tau_star": 1185.00874892391,
+            "amp_rel": 0.9863948856725487
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0047"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:25-03:00",
+      "timestamp_end": "2026-09-18T21:10:28-03:00",
+      "wallclock_seconds": 3.1,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "43/10",
+        "g_over_2delta": "3/2",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 4.3,
+          "g_over_2delta": 1.5,
+          "eta": "0.5",
+          "kappa": "1/2",
+          "gamma_kappa": "6.2305498e-3",
+          "ITF": "3.07218e-19",
+          "Fbar": "4.9975376e-20",
+          "F_samp": "3.0688403e-19",
+          "Sigma1_sq": 1,
+          "b_eta2": "0.75",
+          "B_E2": "0.53413958",
+          "B2": "0.53413958",
+          "ratio_B2_over_ITF": "1.7386338e+18",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0048"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:28-03:00",
+      "timestamp_end": "2026-09-18T21:10:32-03:00",
+      "wallclock_seconds": 3.2,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "106/25",
+        "g_over_2delta": "6/5",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 4.24,
+          "g_over_2delta": 1.2,
+          "eta": "0.71428571",
+          "kappa": "1/2",
+          "gamma_kappa": "2.4968802e-3",
+          "ITF": "5.6715713e-19",
+          "Fbar": "9.3856567e-20",
+          "F_samp": "5.6479824e-19",
+          "Sigma1_sq": 1,
+          "b_eta2": "1.0",
+          "B_E2": "0.53829717",
+          "B2": "0.53829717",
+          "ratio_B2_over_ITF": "9.491147e+17",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0049"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:32-03:00",
+      "timestamp_end": "2026-09-18T21:10:35-03:00",
+      "wallclock_seconds": 3.6,
+      "peak_memory_mb": 340.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "sweep_panel": "b",
+        "family": "cliques",
+        "k": 5,
+        "Delta_mod": "421/100",
+        "g_over_2delta": "21/20",
+        "kappa": "1/2"
+      },
+      "outputs": {
+        "scalar_results": {
+          "panel": "b",
+          "k": 5,
+          "n": 20,
+          "D": 9,
+          "Delta": 4.21,
+          "g_over_2delta": 1.05,
+          "eta": "0.90909091",
+          "kappa": "1/2",
+          "gamma_kappa": "6.2480477e-4",
+          "ITF": "7.9573945e-19",
+          "Fbar": "1.329472e-19",
+          "F_samp": "7.929151e-19",
+          "Sigma1_sq": 1,
+          "b_eta2": "1.0",
+          "B_E2": "0.54039897",
+          "B2": "0.54039897",
+          "ratio_B2_over_ITF": "6.7911547e+17",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. Sweep point for figures/itf_vs_bounds.pdf.",
+      "run_id": "r0050"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:10:26-03:00",
+      "timestamp_end": "2026-09-18T21:22:40-03:00",
+      "wallclock_seconds": 734.8,
+      "peak_memory_mb": 559.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "family": "p4",
+        "k": 40,
+        "kappa": "0.9453",
+        "dps": 60,
+        "group_tol": "1e-40",
+        "scale": "full",
+        "tag": "final"
+      },
+      "inputs": {
+        "data_files": [
+          "experiments/2026-09-18_interval_certification/results/aggregate.csv"
+        ],
+        "data_hashes": {
+          "interval_certification/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604"
+        }
+      },
+      "outputs": {
+        "scalar_results": {
+          "family": "p4",
+          "k": 40,
+          "n": 160,
+          "D": 159,
+          "kappa": "9453/10000",
+          "dps": 331,
+          "S": "4.322544628e-271",
+          "ITF": "1.868439206e-541",
+          "Fbar": "8.480345698e-543",
+          "F_samp": "1.817944338e-541",
+          "Sigma1": "1.289035324e-11",
+          "F_esp": "1.661612067e-22",
+          "B2": "1.661612067e-22",
+          "b_eta2": "0.160926779",
+          "B_E2": "0.03979697482",
+          "Sigma2": "5.709506252e-24",
+          "gamma_kappa": "0.2429981265",
+          "ratio_Sigma1_over_S": "2.982121494e+259",
+          "ratio_B2_over_ITF": "8.893048604e+518",
+          "ratio_Fesp_over_Fsamp": "9.140060188e+518",
+          "eig_residual": "3.533832878e-329",
+          "orth_error": "1.546051884e-330",
+          "min_group_gap": "0.9959323043",
+          "max_within_group": "0.0",
+          "n_distinct": 160,
+          "seconds": 275.1960391998291,
+          "Sigma1_vs_arb_reldiff": "4.842893195e-14",
+          "S_precision_reldiff": "1.321241761e-329",
+          "dps_trail": "[(60, '4.3225446e-271', 145.8), (331, '4.3225446e-271', 275.2), (351, '4.3225446e-271', 313.8)]",
+          "F_samp_meta": {
+            "T": 1256.9515415396256,
+            "dt": 0.004553956782124748,
+            "n_terms": 70,
+            "dropped_rel_mass": 1.635611940057778e-08,
+            "tau_star": 1185.0087489249179,
+            "amp_rel": 0.9863948868006776
+          },
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "Sigma1_matches_arb": true,
+            "precision_converged": true
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B5 (revision_response_trace.json): exact ITF S^2, time-averaged fidelity, F_max bracket and block-projector masses next to the Section 7 certificates, with certificate/true ratios. Calibration only: the certificates themselves never use these numbers.",
+      "notes": "seed=null: deterministic. F_samp is a lower estimate of F_max (sampled sup).",
+      "run_id": "r0051"
+    }
+  ],
+  "summary": {
+    "n_runs_total": 51,
+    "n_runs_success": 51,
+    "n_runs_failure": 0,
+    "n_runs_aborted": 0,
+    "delegated_finding": "R-B5",
+    "matches_hypothesis": "refuted",
+    "key_findings": [
+      "All certificates valid on all 14 table rows; block masses obey ||P_i e_x|| <= L_i(x).",
+      "Sampled sup of the transfer probability attains the ITF to 3 s.f. (K4, dimer) and 0.97 (P4).",
+      "Sigma1/S ranges from 4.3e5 (K4, k=3) to 3.0e259 (P4, k=40).",
+      "Fitted true decay rate 5.4-5.9 (K4, dimer) and 4.4 (P4) per unit distance vs certified gamma_kappa 0.8-1.4 and 0.22-0.24; Stark-ladder factorial correction halves the fit residual (suggestive).",
+      "Figure itf_vs_bounds: near g -> 2 delta+ only B_E^2 ~ 0.54 remains informative while the ITF stays at 8e-19."
+    ],
+    "interpretation": "The certificates are valid but conservative by many orders of magnitude on the Section 7 families; the gap is a rate gap (certified rate normalized by internal coupling, bridges seen only through eta), not an ITF-vs-F_max gap."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "os": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "kernel": "7.0.0-31-generic",
+  "python": "3.12.3",
+  "cpu": "AMD Ryzen 7 3700U with Radeon Vega Mobile Gfx",
+  "n_cores": 8,
+  "ram_gb": 9.6,
+  "captured_at": "2026-09-18T21:29:03-03:00"
+}

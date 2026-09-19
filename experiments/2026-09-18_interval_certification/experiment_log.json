@@ -1,0 +1,243 @@
+{
+  "experiment_id": "2026-09-18_interval_certification",
+  "paper_project": "2026-09_qst-spectral-separation",
+  "opportunity_reference": "opportunities.md #1",
+  "mode": "symbolic",
+  "subareas_active": [
+    "symbolic"
+  ],
+  "target_venue": "Linear Algebra and its Applications",
+  "created_at": "2026-09-18T00:00:00-03:00",
+  "provenance_note": "Addresses delegated review finding R-C4 (revision_response_trace.json): reproducible rigorous certification of every table entry of Section 7, including the decimal kappa selection; library/version/precision named here.",
+  "plan_md_hash": "sha256:3b3be9df35e75e527ab0308a0b5f531a8954a8571cfb4f0c8da65e76b941bb97",
+  "code_commit": "git:71b6e0f",
+  "system_info_hash": "sha256:69f82d75bf69f5c71c3e96c7f4286bacad9f9e0e78bd27d29b5d31dadf137040",
+  "runs": [
+    {
+      "timestamp_start": "2026-09-18T20:50:14-03:00",
+      "timestamp_end": "2026-09-18T20:50:15-03:00",
+      "wallclock_seconds": 0.6,
+      "peak_memory_mb": 34.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "scale": "smoke",
+        "precision_bits": 256,
+        "kappa_grid_step": "1/100",
+        "library": "python-flint 0.9.0",
+        "manuscript": "manuscript/main.tex",
+        "manuscript_sha256": "sha256:c9b80bb682e661294692a99ca9931d44d103185c9266df6e01a734e7f1021a35"
+      },
+      "inputs": {
+        "data_files": [
+          "manuscript/main.tex"
+        ],
+        "data_hashes": {
+          "main.tex": "sha256:c9b80bb682e661294692a99ca9931d44d103185c9266df6e01a734e7f1021a35"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/smoke_aggregate.csv"
+        ],
+        "result_hashes": {
+          "results/smoke_aggregate.csv": "sha256:52a662169bdddc3257e680ce96e5edec5bd6e7ef8593ff91759bca6bb4f13d33"
+        },
+        "scalar_results": {
+          "rows": 3,
+          "rows_all_upper_ok": 3,
+          "rows_all_tight": 3,
+          "kappa_in_argmin": 2,
+          "ball_overlaps_in_min": 9,
+          "block_charpolys_sample": {
+            "cliques": [
+              "x^4 + (-6)*x^2 + (-8)*x + (-3) = (x + (-3))^1 * (x + 1)^3",
+              "x^4 + (-96)*x^3 + 3450*x^2 + (-55016)*x + 328509 = (x + (-27))^1 * (x + (-23))^3"
+            ],
+            "dimer": [
+              "x^2 + (-10)*x + (-1) = (x^2 + (-10)*x + (-1))^1",
+              "x^2 + (-58)*x + 815 = (x^2 + (-58)*x + 815)^1"
+            ],
+            "p4": [
+              "x^4 + (-3)*x^2 + 1 = (x^2 + (-1)*x + (-1))^1 * (x^2 + x + (-1))^1",
+              "x^4 + (-20)*x^3 + 147*x^2 + (-470)*x + 551 = (x^2 + (-11)*x + 29)^1 * (x^2 + (-9)*x + 19)^1"
+            ]
+          }
+        },
+        "failures": []
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-C4 (revision_response_trace.json): reproducible rigorous certification of every table entry of Section 7, including the decimal kappa selection; library/version/precision named here.",
+      "notes": "seed=null: deterministic exact/ball arithmetic, no randomness.",
+      "run_id": "r0001"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:50:39-03:00",
+      "timestamp_end": "2026-09-18T20:52:03-03:00",
+      "wallclock_seconds": 84.2,
+      "peak_memory_mb": 38.8,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "scale": "full",
+        "precision_bits": 256,
+        "kappa_grid_step": "1/10000",
+        "library": "python-flint 0.9.0",
+        "manuscript": "manuscript/main.tex",
+        "manuscript_sha256": "sha256:c9b80bb682e661294692a99ca9931d44d103185c9266df6e01a734e7f1021a35"
+      },
+      "inputs": {
+        "data_files": [
+          "manuscript/main.tex"
+        ],
+        "data_hashes": {
+          "main.tex": "sha256:c9b80bb682e661294692a99ca9931d44d103185c9266df6e01a734e7f1021a35"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/aggregate.csv",
+          "results/params.csv",
+          "results/kappa_audit.csv"
+        ],
+        "result_hashes": {
+          "results/aggregate.csv": "sha256:cc44a7625f476fb27f6095014b60e34bf931eddfc4ad17a9914a53173ade4604",
+          "results/params.csv": "sha256:2b430b823068de76796209b9e1c1d37cf543b27a024d4a447fdc357e9a7b26a1",
+          "results/kappa_audit.csv": "sha256:caa9e2a968c17678379d46b305db91be0c4ed352eabfe1ae710dfd45541841b3"
+        },
+        "scalar_results": {
+          "rows": 14,
+          "rows_all_upper_ok": 14,
+          "rows_all_tight": 14,
+          "kappa_in_argmin": 14,
+          "ball_overlaps_in_min": 20,
+          "block_charpolys_sample": {
+            "cliques": [
+              "x^4 + (-6)*x^2 + (-8)*x + (-3) = (x + (-3))^1 * (x + 1)^3",
+              "x^4 + (-96)*x^3 + 3450*x^2 + (-55016)*x + 328509 = (x + (-27))^1 * (x + (-23))^3"
+            ],
+            "dimer": [
+              "x^2 + (-10)*x + (-1) = (x^2 + (-10)*x + (-1))^1",
+              "x^2 + (-58)*x + 815 = (x^2 + (-58)*x + 815)^1"
+            ],
+            "p4": [
+              "x^4 + (-3)*x^2 + 1 = (x^2 + (-1)*x + (-1))^1 * (x^2 + x + (-1))^1",
+              "x^4 + (-20)*x^3 + 147*x^2 + (-470)*x + 551 = (x^2 + (-11)*x + 29)^1 * (x^2 + (-9)*x + 19)^1"
+            ]
+          }
+        },
+        "failures": []
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-C4 (revision_response_trace.json): reproducible rigorous certification of every table entry of Section 7, including the decimal kappa selection; library/version/precision named here.",
+      "notes": "seed=null: deterministic exact/ball arithmetic, no randomness.",
+      "run_id": "r0002"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:52:25-03:00",
+      "timestamp_end": "2026-09-18T20:54:07-03:00",
+      "wallclock_seconds": 101.6,
+      "peak_memory_mb": 39.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "scale": "full",
+        "precision_bits": 512,
+        "kappa_grid_step": "1/10000",
+        "library": "python-flint 0.9.0",
+        "manuscript": "manuscript/main.tex",
+        "manuscript_sha256": "sha256:c9b80bb682e661294692a99ca9931d44d103185c9266df6e01a734e7f1021a35"
+      },
+      "inputs": {
+        "data_files": [
+          "manuscript/main.tex"
+        ],
+        "data_hashes": {
+          "main.tex": "sha256:c9b80bb682e661294692a99ca9931d44d103185c9266df6e01a734e7f1021a35"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/aggregate_prec512.csv",
+          "results/params_prec512.csv",
+          "results/kappa_audit_prec512.csv"
+        ],
+        "result_hashes": {
+          "results/aggregate_prec512.csv": "sha256:8c1ed8f6cf2fce23464196632d07cd5ca8f94fc4c6156160e10d65113d73f321",
+          "results/params_prec512.csv": "sha256:2b430b823068de76796209b9e1c1d37cf543b27a024d4a447fdc357e9a7b26a1",
+          "results/kappa_audit_prec512.csv": "sha256:caa9e2a968c17678379d46b305db91be0c4ed352eabfe1ae710dfd45541841b3"
+        },
+        "scalar_results": {
+          "rows": 14,
+          "rows_all_upper_ok": 14,
+          "rows_all_tight": 14,
+          "kappa_in_argmin": 14,
+          "ball_overlaps_in_min": 18,
+          "block_charpolys_sample": {
+            "cliques": [
+              "x^4 + (-6)*x^2 + (-8)*x + (-3) = (x + (-3))^1 * (x + 1)^3",
+              "x^4 + (-96)*x^3 + 3450*x^2 + (-55016)*x + 328509 = (x + (-27))^1 * (x + (-23))^3"
+            ],
+            "dimer": [
+              "x^2 + (-10)*x + (-1) = (x^2 + (-10)*x + (-1))^1",
+              "x^2 + (-58)*x + 815 = (x^2 + (-58)*x + 815)^1"
+            ],
+            "p4": [
+              "x^4 + (-3)*x^2 + 1 = (x^2 + (-1)*x + (-1))^1 * (x^2 + x + (-1))^1",
+              "x^4 + (-20)*x^3 + 147*x^2 + (-470)*x + 551 = (x^2 + (-11)*x + 29)^1 * (x^2 + (-9)*x + 19)^1"
+            ]
+          }
+        },
+        "failures": []
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-C4 (revision_response_trace.json): reproducible rigorous certification of every table entry of Section 7, including the decimal kappa selection; library/version/precision named here.",
+      "notes": "seed=null: deterministic exact/ball arithmetic, no randomness.",
+      "run_id": "r0003"
+    },
+    {
+      "timestamp_start": "2026-09-18T21:02:28-03:00",
+      "timestamp_end": "2026-09-18T21:02:51-03:00",
+      "wallclock_seconds": 22.6,
+      "peak_memory_mb": 16.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "check": "crosscheck",
+        "script": "verification/verify_examples.py"
+      },
+      "inputs": {
+        "data_hashes": {
+          "verify_examples.py": "sha256:e4574eeeb7638c5e2d1ab6b4a7a4700142ec5d3b11f3c9e51aa85e3b87a6e432"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/crosscheck_verify_examples.log"
+        ],
+        "scalar_results": {
+          "all_reproduced": true
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-C4: cross-check of the Arb certification against the independent verification/ re-derivation.",
+      "notes": "Independent float/mpmath re-derivation agrees with every printed table value.",
+      "run_id": "r0004"
+    }
+  ],
+  "summary": {
+    "n_runs_total": 4,
+    "n_runs_success": 4,
+    "n_runs_failure": 0,
+    "n_runs_aborted": 0,
+    "delegated_finding": "R-C4",
+    "matches_hypothesis": "supported",
+    "key_findings": [
+      "All 42 printed table entries (14 rows x Sigma1, F_esp, B^2) are certified upper bounds and the tightest 4-s.f. upward roundings (Arb, python-flint 0.9.0 / FLINT 3.6.0, 256 bits; identical at 512 bits).",
+      "17 displayed approximate parameters round correctly; 3 printed b_eta^2 bounds valid and tight.",
+      "Every kappa_tab lies in the ball-aware grid argmin of Sigma1 (unique in 11 rows; 3 plateau rows where kappa=1/2 is the convention).",
+      "Independent verification/verify_examples.py reproduces all example claims."
+    ],
+    "interpretation": "The Section 7 tables are rigorously certified; the manuscript can name library, version, precision and the kappa objective, and point the Data availability statement at this folder."
+  }
+}

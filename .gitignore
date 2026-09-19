@@ -1,0 +1,34 @@
+# Environments and caches
+.venv/
+venv/
+# anchored: experiments/*/env/ holds the recorded environment and is versioned
+/env/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+# LaTeX temporaries
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+# System
+.DS_Store
+Thumbs.db
+# Never version internal pipeline traces
+.sciflow/
+.claude/
+CLAUDE.md
+# Written by the experiment scripts, not part of the release
+.experiment_log.lock
+smoke_*
+experiments/*/results/final.csv
+experiments/*/results/masses_final.csv

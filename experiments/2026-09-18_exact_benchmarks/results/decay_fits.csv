@@ -1,0 +1,5 @@
+series,n_points,k_range,gamma_true_linear_fit,gamma_kappa_certified_range,rms_resid_exponential,rms_resid_stark,max_resid_exponential,max_resid_stark,q_stark
+cliques,6,3-10,5.4318,0.8054-1.1494,0.8257,0.3894,1.2044,0.5648,1.0990e-04
+dimer,5,3-12,5.9059,0.9980-1.4073,1.3075,0.6251,1.6994,0.81,4.8741e-05
+p4,3,10-40,4.3958,0.2243-0.2430,8.6086,6.415,11.955,8.9088,5.4551e-07
+cliques_sweep_a,10,3-12,5.5688,0.8054-1.1617,1.0791,0.5132,1.9804,0.9353,9.6423e-05

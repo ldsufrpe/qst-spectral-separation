@@ -1,0 +1,549 @@
+{
+  "experiment_id": "2026-09-18_mode_localization",
+  "paper_project": "2026-09_qst-spectral-separation",
+  "opportunity_reference": "opportunities.md #1",
+  "mode": "numerical",
+  "subareas_active": [
+    "numerical"
+  ],
+  "target_venue": "Linear Algebra and its Applications",
+  "created_at": "2026-09-18T00:00:00-03:00",
+  "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+  "plan_md_hash": "sha256:abb53b6d28cd9bd5cc0f7dbe984cb4b33de2e0efcd83d293c2d64f92618fb059",
+  "code_commit": "git:71b6e0f",
+  "system_info_hash": "sha256:d73572834c7564f45f63abe6e7f74f1a4ee088d480d5da6c00e2741f2bcff5b8",
+  "runs": [
+    {
+      "timestamp_start": "2026-09-18T20:58:49-03:00",
+      "timestamp_end": "2026-09-18T20:58:50-03:00",
+      "wallclock_seconds": 1.1,
+      "peak_memory_mb": 105.7,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 3,
+        "kappa": "1/1000",
+        "scale": "smoke",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 3,
+          "n": 12,
+          "D": 11,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "1/1000",
+          "omega2_min": "1.0226207",
+          "omega2_max": "16.421938",
+          "S": "1.0416193e-8",
+          "cos_transmissibility_sampled": "9.7747519e-9",
+          "Sigma1": "0.081813175",
+          "B": "0.080140447",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "7.8544219e+6",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 15120.520683940857,
+            "dt": 0.12912840137923504
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0001"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:59:16-03:00",
+      "timestamp_end": "2026-09-18T20:59:17-03:00",
+      "wallclock_seconds": 0.8,
+      "peak_memory_mb": 105.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 3,
+        "kappa": "1/2",
+        "scale": "full",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 3,
+          "n": 12,
+          "D": 11,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "1/2",
+          "omega2_min": "1.0226207",
+          "omega2_max": "16.421938",
+          "S": "1.0416193e-8",
+          "cos_transmissibility_sampled": "9.7747519e-9",
+          "Sigma1": "0.081813175",
+          "B": "0.080140447",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "7.8544219e+6",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 15120.520683940857,
+            "dt": 0.12912840137923504
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0002"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:59:17-03:00",
+      "timestamp_end": "2026-09-18T20:59:18-03:00",
+      "wallclock_seconds": 1.2,
+      "peak_memory_mb": 154.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 4,
+        "kappa": "1/2",
+        "scale": "full",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 4,
+          "n": 16,
+          "D": 15,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "1/2",
+          "omega2_min": "1.0226207",
+          "omega2_max": "22.421938",
+          "S": "9.6282966e-14",
+          "cos_transmissibility_sampled": "8.8582963e-14",
+          "Sigma1": "0.083421384",
+          "B": "0.080140447",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "8.6641893e+11",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 18209.533598858,
+            "dt": 0.10545275760992374
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0003"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:59:18-03:00",
+      "timestamp_end": "2026-09-18T20:59:20-03:00",
+      "wallclock_seconds": 2.0,
+      "peak_memory_mb": 208.7,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 5,
+        "kappa": "843/1000",
+        "scale": "full",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 5,
+          "n": 20,
+          "D": 19,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "843/1000",
+          "omega2_min": "1.0226207",
+          "omega2_max": "28.421938",
+          "S": "3.2403148e-19",
+          "cos_transmissibility_sampled": "2.8673035e-19",
+          "Sigma1": "0.077281971",
+          "B": "0.077281971",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "2.3850143e+17",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 20845.616390858093,
+            "dt": 0.09090307454460561
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0004"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:59:20-03:00",
+      "timestamp_end": "2026-09-18T20:59:23-03:00",
+      "wallclock_seconds": 2.8,
+      "peak_memory_mb": 249.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 6,
+        "kappa": "217/250",
+        "scale": "full",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 6,
+          "n": 24,
+          "D": 23,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "217/250",
+          "omega2_min": "1.0226207",
+          "omega2_max": "34.421938",
+          "S": "4.7688615e-25",
+          "cos_transmissibility_sampled": "4.2443386e-25",
+          "Sigma1": "0.019961272",
+          "B": "0.019961272",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "4.1857521e+22",
+          "dps": 60,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 23183.840868340416,
+            "dt": 0.08087260137472849
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0005"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:59:23-03:00",
+      "timestamp_end": "2026-09-18T20:59:30-03:00",
+      "wallclock_seconds": 6.7,
+      "peak_memory_mb": 292.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 7,
+        "kappa": "871/1000",
+        "scale": "full",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 7,
+          "n": 28,
+          "D": 27,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "871/1000",
+          "omega2_min": "1.0226207",
+          "omega2_max": "40.421938",
+          "S": "3.5564445e-31",
+          "cos_transmissibility_sampled": "3.0967017e-31",
+          "Sigma1": "7.6905676e-3",
+          "B": "7.6905676e-3",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "2.1624315e+28",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 25306.921428072703,
+            "dt": 0.07344867986230368
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0006"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:59:30-03:00",
+      "timestamp_end": "2026-09-18T20:59:41-03:00",
+      "wallclock_seconds": 11.1,
+      "peak_memory_mb": 304.8,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 8,
+        "kappa": "861/1000",
+        "scale": "full",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 8,
+          "n": 32,
+          "D": 31,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "861/1000",
+          "omega2_min": "1.0226207",
+          "omega2_max": "46.421938",
+          "S": "1.4812667e-37",
+          "cos_transmissibility_sampled": "1.2987648e-37",
+          "Sigma1": "4.0783622e-3",
+          "B": "4.0783622e-3",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "2.7532935e+34",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 27265.170196019168,
+            "dt": 0.06768202813075734
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0007"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:59:41-03:00",
+      "timestamp_end": "2026-09-18T20:59:55-03:00",
+      "wallclock_seconds": 14.1,
+      "peak_memory_mb": 319.7,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 9,
+        "kappa": "171/200",
+        "scale": "full",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 9,
+          "n": 36,
+          "D": 35,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "171/200",
+          "omega2_min": "1.0226207",
+          "omega2_max": "52.421938",
+          "S": "3.7118986e-44",
+          "cos_transmissibility_sampled": "3.1306367e-44",
+          "Sigma1": "2.0965595e-3",
+          "B": "2.0965595e-3",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "5.6482133e+40",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 29091.895488737187,
+            "dt": 0.06304314901681406
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0008"
+    },
+    {
+      "timestamp_start": "2026-09-18T20:59:55-03:00",
+      "timestamp_end": "2026-09-18T21:00:14-03:00",
+      "wallclock_seconds": 18.6,
+      "peak_memory_mb": 326.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "k": 10,
+        "kappa": "867/1000",
+        "scale": "full",
+        "k_in": "1",
+        "c": "1/10",
+        "kappa0": "1",
+        "step": "6"
+      },
+      "outputs": {
+        "scalar_results": {
+          "k": 10,
+          "n": 40,
+          "D": 39,
+          "g": "2.5936112",
+          "W_max": "3.3989179",
+          "delta": "0.1",
+          "eta": "0.040102483",
+          "kappa": "867/1000",
+          "omega2_min": "1.0226207",
+          "omega2_max": "58.421938",
+          "S": "5.9256378e-51",
+          "cos_transmissibility_sampled": "4.8357966e-51",
+          "Sigma1": "6.4884672e-4",
+          "B": "6.4884672e-4",
+          "b_eta": "0.080140447",
+          "ratio_Sigma1_over_S": "1.0949821e+47",
+          "dps": 120,
+          "checks_all_pass": true,
+          "checks": {
+            "aglo_counts": true,
+            "S_le_Sigma1": true,
+            "S_le_B": true,
+            "Fbar_le_Sigma2": true,
+            "Fsamp_le_S2": true,
+            "masses_le_L": true,
+            "precision_converged": true,
+            "maxf_attained_by_sign": true,
+            "cos_sup_le_S": true
+          },
+          "cos_sampling": {
+            "T": 30810.50178156935,
+            "dt": 0.05921118512629829
+          }
+        }
+      },
+      "exit_code": 0,
+      "provenance_note": "Addresses delegated review finding R-B8 (revision_response_trace.json): a non-quantum structured-matrix example (stiffness matrix of weakly coupled substructures, vibration mode localization) where block-projector mass bounds are the natural quantity; certificate vs exact modal values.",
+      "notes": "seed=null: deterministic. cos transmissibility is a sampled lower estimate.",
+      "run_id": "r0009"
+    }
+  ],
+  "summary": {
+    "n_runs_total": 9,
+    "n_runs_success": 9,
+    "n_runs_failure": 0,
+    "n_runs_aborted": 0,
+    "delegated_finding": "R-B8",
+    "matches_hypothesis": "ambiguous",
+    "key_findings": [
+      "Stiffness matrix of weakly coupled substructures on a graded foundation satisfies (H1)-(H2) with g/(2 delta) ~ 13.",
+      "S(s,t) = max_{|f|<=1} |f(K)_ts| makes the certificate bound cos(tau sqrt K) transmissibility; all bounds hold for k=3..10.",
+      "Sampled cos transmissibility reaches 0.82-0.94 of S.",
+      "Certificate/exact ratio grows from ~1e7 (k=3) to ~1e47 (k=10); fitted true rate ~3.5 vs certified ~0.41 per unit distance."
+    ],
+    "interpretation": "Validity and applicability to a non-quantum structured matrix are supported; quantitative tightness is not."
+  }
+}
