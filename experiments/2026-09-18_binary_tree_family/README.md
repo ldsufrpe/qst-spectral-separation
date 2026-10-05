@@ -13,7 +13,7 @@ k = 2^{r+1} − 1 modules and n = 4k vertices. Module ℓ (BFS label) has site e
 Bridges of weight w = 0.1 run from parent vertex 1 or 2 to child vertex 0; they form a
 matching. The hypotheses and parameters, all checked in code:
 - (H1): `δ = ‖H_out‖ = 0.1`, since the bridges form a matching.
-- (H2): `g = 20`, `W = 4`, from the same blocks as Example 7.1.
+- (H2): `g = 20`, `W = 4`, from the same blocks as Example 7.2.
 - (H3): `D0 = 1`, `M0 = 4`.
 - `d = 4`, `μ = 1`, `η = 5.03·10⁻³`, `ĝ = 2.475`, `ϱ = 1.1350`.
 

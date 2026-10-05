@@ -1,8 +1,8 @@
 # qst-spectral-separation
 
 Code, aggregated results and run logs for the computations in the manuscript
-*"Localization of Spectral Projectors from Block Data, with an Application to Quantum State
-Transfer"* by Leon D. da Silva, Eberson Ferreira da Silva and Tiago Mendonça Lucena de Veras
+*"Decay of spectral projectors for block matrices with separated spectra, with an application
+to quantum state transfer"* by Leon D. da Silva, Eberson Ferreira da Silva and Tiago Mendonça Lucena de Veras
 (Departamento de Matemática, Universidade Federal Rural de Pernambuco). The manuscript is in
 preparation and is not part of this repository.
 
@@ -20,11 +20,13 @@ transfer.
 The theorems are analytic. This repository holds the computations that go with them:
 
 1. a rigorous certification of every number printed in the certified table of Section 7
-   (Table 2, Examples 7.1–7.3);
+   (Table 2, Examples 7.2–7.4);
 2. supporting computations that compare the certificates with exact values on the same
    families, and apply them to two further families (a binary tree of modules and a
-   mass–spring stiffness matrix);
+   mass–spring stiffness matrix, Examples 7.6 and 7.7);
 3. two independent re-derivations in plain double precision (`verification/`).
+
+Example 7.1 (two and three sites) uses closed forms only and has no code here.
 
 It is a curated export of the authors' working directory, limited to what is needed to rerun
 these computations.
@@ -41,11 +43,11 @@ these computations.
   conservative: `Σ1/S` ranges from 4.3·10⁵ to 3.0·10²⁵⁹, because the true decay rate is 4–5
   times the certified rate `γ_κ` on the K4 and dimer families and about 19 times on the P4
   family.
-- **Binary tree of K4 modules.** The radial growth condition (GR) holds with `a = ln2/2` and
+- **Binary tree of K4 modules (Example 7.6).** The radial growth condition (GR) holds with `a = ln2/2` and
   `C = 3√2` uniformly in depth, so the prefactor of Theorem C does not depend on the number of
   modules. For a fixed pair, the diameter bound overtakes the Theorem C bound between depths 13
   and 14.
-- **Mass–spring stiffness matrix.** The certificates bound the time-uniform displacement
+- **Mass–spring stiffness matrix (Example 7.7).** The certificates bound the time-uniform displacement
   transmissibility `sup_τ |cos(τ√K)_{ts}|` without modal analysis; they hold for every size
   tested, with certificate-to-exact ratios from 10⁷ to 10⁴⁷.
 
@@ -60,7 +62,7 @@ refuted.
 ├── reproduction_report.md          clean-environment rerun of every command below
 ├── experiments/
 │   ├── 2026-09-18_interval_certification/   Table 2 of Section 7, Arb certification
-│   │   └── data/examples_sec7.tex           Examples 7.1–7.3 (with tables), verbatim extract
+│   │   └── data/examples_sec7.tex           Examples 7.2–7.4 (with tables), verbatim extract
 │   ├── 2026-09-18_exact_benchmarks/         certificates vs exact values; Figure 1
 │   ├── 2026-09-18_binary_tree_family/       (GR) constants and Theorem C on a tree
 │   └── 2026-09-18_mode_localization/        mass–spring stiffness matrix
@@ -87,10 +89,10 @@ Run `interval_certification` first: `exact_benchmarks` and `binary_tree_family` 
 | Paper item | Experiment | Commands | Produces | Time |
 |---|---|---|---|---|
 | Table 2 of Section 7, displayed parameters, choice of `κ` | `interval_certification` | `python run.py --prec 256`, `python run.py --prec 512`, `python crosscheck.py` | `results/aggregate.csv`, `params.csv`, `kappa_audit.csv` (and `_prec512`) | 3 min |
-| Certificates vs exact values on Examples 7.1–7.3 | `exact_benchmarks` | `python run_benchmark.py`, `python analysis.py` | `results/aggregate.csv`, `masses.csv`, `decay_fits.csv` | 14 min |
+| Certificates vs exact values on Examples 7.2–7.4 | `exact_benchmarks` | `python run_benchmark.py`, `python analysis.py` | `results/aggregate.csv`, `masses.csv`, `decay_fits.csv` | 14 min |
 | Figure 1 (`itf_vs_bounds`, panels (a)–(d)) | `exact_benchmarks` | `python run_sweep.py`, `python make_figure.py` (panels (c), (d) read `../../2026-09-18_binary_tree_family/results/`; run that experiment first, or use its committed CSVs) | `results/sweep.csv`, `figures/itf_vs_bounds.pdf` | 3 min |
-| Binary tree of K4 modules | `binary_tree_family` | `python run.py --rmax 12 --rexact 5`, `python fixed_pair.py` | `results/aggregate.csv`, `fixed_pair.csv`, `radial_constants.csv`, `theoremC_choice.csv` | 28 min |
-| Mass–spring stiffness matrix | `mode_localization` | `python run.py --kmax 10` | `results/aggregate.csv`, `participation.csv` | 1 min |
+| Binary tree of K4 modules (Example 7.6) | `binary_tree_family` | `python run.py --rmax 12 --rexact 5`, `python fixed_pair.py` | `results/aggregate.csv`, `fixed_pair.csv`, `radial_constants.csv`, `theoremC_choice.csv` | 28 min |
+| Mass–spring stiffness matrix (Example 7.7) | `mode_localization` | `python run.py --kmax 10` | `results/aggregate.csv`, `participation.csv` | 1 min |
 | Proposition 8.1 (Section 8.2) | — | from `verification/`: `python verify_prop_comparacao_round3.py` | stdout, ends with `NO VIOLATION` | 14 s |
 
 All of these commands were rerun from a clean export of this tree in a fresh virtual
@@ -114,10 +116,15 @@ comparison with the versioned results.
 - All computations are deterministic; there are no seeds.
 - `families.py`, `bounds.py`, `spectral_mp.py` and `logutil.py` are duplicated across the
   experiments on purpose (each run logs the hash of its own copy); the copies are identical.
-- `interval_certification/data/examples_sec7.tex` is a verbatim extract of Examples 7.1–7.3 of
-  the manuscript source, tables included; `run.py` parses the printed values from it. The
-  extract predates a layout change: the manuscript now prints the same 14 rows, with the same
-  values, as a single Table 2 instead of three tables.
+- `interval_certification/data/examples_sec7.tex` is a verbatim extract of the examples now
+  numbered 7.2–7.4 in the manuscript source, tables included; `run.py` parses the printed values
+  from it. The extract predates two changes in the manuscript: the same 14 rows, with the same
+  values, are now printed as a single Table 2 instead of three tables, and a new Example 7.1
+  shifted the numbering of the examples by one.
+- Files written before that shift keep the numbering of their date: `plan.md`, the code
+  docstrings, `figure_manifest.json`, `verification/verify_examples.py` and
+  `reproduction_report.md`. There, Examples 7.1–7.3 are today's 7.2–7.4, and the binary tree
+  (Example 7.5) is today's Example 7.6.
 
 ## Citation
 

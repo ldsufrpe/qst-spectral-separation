@@ -1,6 +1,6 @@
 # Reportable narrative
 
-Every number printed in the three example tables of Section 7 is a valid upper bound on the quantity it reports and is its tightest upward rounding to four significant figures, and each tabulated κ minimizes Σ1 on the decimal grid of step 10⁻⁴. Each quantity was recomputed at the printed κ from exact rational inputs in Arb ball arithmetic with outward rounding (python-flint 0.9.0, FLINT 3.6.0) at 256 bits, and every printed value was compared with the exact rational endpoints of its enclosure. All 42 entries of the 14 rows, across the columns Σ1, F_esp and B², are certified upper bounds and tight roundings, with enclosure radii below 10⁻⁷⁵ and identical verdicts at 512 bits. The 17 parameters displayed with ≈ in Examples 7.1–7.3 round correctly, the three printed bounds on b_η² are valid and tight, and every tabulated κ lies in the grid argmin of Σ1. That minimizer is unique in eleven rows. In the other three, Σ1 is constant on the whole grid, so κ = 1/2 is a convention and the bound B² in those rows is set by b_η² instead of Σ1. An independent re-derivation reproduces every claim of the three examples.
+Every number printed in Table 2 of Section 7 (three tables when this ran) is a valid upper bound on the quantity it reports and is its tightest upward rounding to four significant figures, and each tabulated κ minimizes Σ1 on the decimal grid of step 10⁻⁴. Each quantity was recomputed at the printed κ from exact rational inputs in Arb ball arithmetic with outward rounding (python-flint 0.9.0, FLINT 3.6.0) at 256 bits, and every printed value was compared with the exact rational endpoints of its enclosure. All 42 entries of the 14 rows, across the columns Σ1, F_esp and B², are certified upper bounds and tight roundings, with enclosure radii below 10⁻⁷⁵ and identical verdicts at 512 bits. The 17 parameters displayed with ≈ in Examples 7.2–7.4 round correctly, the three printed bounds on b_η² are valid and tight, and every tabulated κ lies in the grid argmin of Σ1. That minimizer is unique in eleven rows. In the other three, Σ1 is constant on the whole grid, so κ = 1/2 is a convention and the bound B² in those rows is set by b_η² instead of Σ1. An independent re-derivation reproduces every claim of the three examples.
 
 # Operational log
 
@@ -10,11 +10,11 @@ Every number printed in the three example tables of Section 7 is a valid upper b
 ## What was certified
 - All 14 rows of `Tab:cliques`, `Tab:dimero` and `Tab:p4`, parsed at run time from the
   manuscript text. In this release the parsed file is `data/examples_sec7.tex`, a verbatim
-  extract of Examples 7.1–7.3 with their tables. The SHA-256 of the parsed file is in each log
+  extract of Examples 7.2–7.4 (numbered 7.1–7.3 when extracted) with their tables. The SHA-256 of the parsed file is in each log
   run. The runs logged on 2026-09-18 parsed the full manuscript source
   (`sha256:c9b80bb6…`), which is the file the extract was cut from (lines 1903–2085). The columns `Σ1`, `F_esp` and `B²`
   were evaluated at the printed `κ_tab`.
-- 17 parameters displayed with "≈" in the text of Examples 7.1–7.3, plus 3 printed bounds
+- 17 parameters displayed with "≈" in the text of Examples 7.2–7.4, plus 3 printed bounds
   `b_η² ≤ …`.
 - The decimal κ search, over 9999 grid points per row (step 10⁻⁴), with Σ1 as the objective.
   §7 does not name the objective; Σ1 is the only printed column that depends on κ.

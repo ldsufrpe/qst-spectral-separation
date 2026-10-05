@@ -1,15 +1,15 @@
 # Reportable narrative
 
-On the fourteen instances of Examples 7.1–7.3, the certificates Σ₁, F_esp and B² bound the exact quantities they control but sit far more than a few orders of magnitude above them, so the hypothesis of near-tightness is refuted. The exact ITF S², time average and block-projector masses, together with a sampled supremum of the transfer probability, come from multiprecision diagonalization at 60 to 331 digits with checked convergence and serve only as calibration, since no certificate uses them. No certified inequality fails on any instance, block masses included. The sampled supremum attains the ITF to three significant figures on the K4 and dimer instances and reaches 0.97 of it on P4, so the gap lies between certificate and ITF, where Σ₁/S grows from about 4·10⁵ (K4, k=3) to 3·10²⁵⁹ (P4, k=40). The fitted decay rate of transport, 5.4 to 5.9 per unit distance for K4 and the dimer and 4.4 for P4, exceeds the certified γ_κ of 0.8 to 1.4 and 0.22 to 0.24 by a factor of four to five and of about nineteen. The certified rate is normalized by the internal coupling and sees the weak bridges only through η, the floor at which L_i stays on nearby blocks, so the certified block-mass profile has the true shape without the true rate. A Stark-ladder factorial correction halves the fit residual, which with 3 to 10 points per family is suggestive only.
+On the fourteen instances of Examples 7.2–7.4, the certificates Σ₁, F_esp and B² bound the exact quantities they control but sit far more than a few orders of magnitude above them, so the hypothesis of near-tightness is refuted. The exact ITF S², time average and block-projector masses, together with a sampled supremum of the transfer probability, come from multiprecision diagonalization at 60 to 331 digits with checked convergence and serve only as calibration, since no certificate uses them. No certified inequality fails on any instance, block masses included. The sampled supremum attains the ITF to three significant figures on the K4 and dimer instances and reaches 0.97 of it on P4, so the gap lies between certificate and ITF, where Σ₁/S grows from about 4·10⁵ (K4, k=3) to 3·10²⁵⁹ (P4, k=40). The fitted decay rate of transport, 5.4 to 5.9 per unit distance for K4 and the dimer and 4.4 for P4, exceeds the certified γ_κ of 0.8 to 1.4 and 0.22 to 0.24 by a factor of four to five and of about nineteen. The certified rate is normalized by the internal coupling and sees the weak bridges only through δ, which lowers the numerator g − 2δ of ĝ and sets the floor η at which L_i stays on nearby blocks, so the certified block-mass profile has the true shape without the true rate. A Stark-ladder factorial correction halves the fit residual, which with 3 to 10 points per family is suggestive only.
 
 # Operational log
 
 **Experiment:** `2026-09-18_exact_benchmarks` · mode numerical
 **Pre-registered plan:** `plan.md` (2026-09-18; its "Tables 3–5" are the three tables of
-Section 7 under an earlier numbering)
+Section 7 under an earlier numbering, now merged into Table 2)
 
 ## What was computed
-For each of the 14 rows of Table 2 of Section 7 (Examples 7.1–7.3, printed as three tables when this ran; s and t as in §7,
+For each of the 14 rows of Table 2 of Section 7 (Examples 7.2–7.4, printed as three tables and numbered 7.1–7.3 when this ran; s and t as in §7,
 κ = κ_tab), the following exact
 quantities were computed by multiprecision diagonalization (mpmath `eigsy`):
 - `S(s,t)` and ITF `S²`, grouped by distinct eigenvalue with tolerance 10⁻⁴⁰

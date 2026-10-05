@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software or its results, please cite the paper."
 type: software
-title: "qst-spectral-separation: computations for 'Localization of Spectral Projectors from Block Data, with an Application to Quantum State Transfer'"
+title: "qst-spectral-separation: computations for 'Decay of spectral projectors for block matrices with separated spectra, with an application to quantum state transfer'"
 authors:
   - family-names: "da Silva"
     given-names: "Leon D."
@@ -17,14 +17,14 @@ license:
   - CC-BY-4.0
 keywords:
   - spectral projectors
-  - localization
+  - exponential decay
   - block matrices
   - quantum state transfer
   - ball arithmetic
 preferred-citation:
   type: article
   status: in-preparation
-  title: "Localization of Spectral Projectors from Block Data, with an Application to Quantum State Transfer"
+  title: "Decay of spectral projectors for block matrices with separated spectra, with an application to quantum state transfer"
   authors:
     - family-names: "da Silva"
       given-names: "Leon D."
