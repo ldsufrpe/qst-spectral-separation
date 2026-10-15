@@ -1,79 +1,90 @@
 # qst-spectral-separation
 
-Code, aggregated results and run logs for the computations in the manuscript
-*"Decay of spectral projectors for block matrices with separated spectra, with an application
-to quantum state transfer"* by Leon D. da Silva, Eberson Ferreira da Silva and Tiago Mendonça Lucena de Veras
+This repository holds the code, aggregated results and run logs for the computations in the manuscript
+*"Certified suppression of quantum state transfer between spectrally separated communities"* by
+Leon D. da Silva, Eberson Ferreira da Silva and Tiago Mendonça Lucena de Veras
 (Departamento de Matemática, Universidade Federal Rural de Pernambuco). The manuscript is in
 preparation and is not part of this repository.
 
 ## What this is
 
-The paper considers a real symmetric matrix `H` supported on a graph, split as
-`H = H_in + H_out` with `H_in` block diagonal along a partition of the vertices,
-`‖H_out‖ ≤ δ`, and block spectra separated by `g > 2δ`. It proves that the column norms of the
-spectral projector `P_i` attached to each block decay exponentially in the graph distance to
-that block, with constants computed from block data alone: no eigendecomposition of `H` and no
-enclosure of its global spectrum. Summing over blocks bounds the off-diagonal entries of
-`e^{-iτH}` uniformly in `τ ≥ 0`, and hence the fidelity of single-excitation quantum state
-transfer.
+The paper studies a single excitation on a network of coupled qubits whose vertices form
+communities. The site-energy windows of the communities are separated by `g`, which exceeds
+twice the coupling `δ` between communities. The paper then bounds the transfer amplitude
+`|⟨t|e^{-iτH}|s⟩|` at every time `τ`. The bounds are computed a priori from the diagonal blocks
+of the Hamiltonian and the couplings between them, without its spectrum. The bound on the mass
+of each cluster projector decays as `q^N` in the number `N` of bridges, where `q = 2δ/g`. On
+chains of communities whose bridges are weaker than a quarter of the separation, it decays
+superexponentially. Evaluated in ball arithmetic with the exact
+block resolvents, the contour integral behind these bounds gives a computer-assisted
+certificate.
 
-The theorems are analytic. This repository holds the computations that go with them:
+The theorems are analytic. This repository holds the computations of the paper's Section 7,
+where the bounds are set against exact values:
 
-1. a rigorous certification of every number printed in the certified table of Section 7
-   (Table 2, Examples 7.2–7.4);
-2. supporting computations that compare the certificates with exact values on the same
-   families, and apply them to two further families (a binary tree of modules and a
-   mass–spring stiffness matrix, Examples 7.6 and 7.7);
-3. two independent re-derivations in plain double precision (`verification/`).
+1. the three families of modular chains (`K4`, dimer and `P4` modules): Table 2, Figure 1 and
+   the numbers quoted with them;
+2. the Wannier–Stark ladder (Example 7.1): Figure 2 and the numbers quoted with it.
 
-Example 7.1 (two and three sites) uses closed forms only and has no code here.
-
-It is a curated export of the authors' working directory, limited to what is needed to rerun
-these computations.
+The repository is a curated export of the authors' working directory. It is limited to what
+these computations need.
 
 ## Findings
 
-- **Table 2 of Section 7.** All 42 printed entries (14 rows × `Σ1`, `F_esp`, `B²`) are valid
-  upper bounds and the tightest upward roundings to four significant figures. The 17
-  parameters displayed with "≈" round correctly, and each tabulated `κ` lies in the argmin of
-  `Σ1` on the decimal grid of step 10⁻⁴. Arb ball arithmetic (python-flint 0.9.0, FLINT 3.6.0)
-  at 256 bits, with identical verdicts at 512 bits.
-- **Certificates against exact values.** On all 14 instances every certified inequality holds
-  against multiprecision diagonalization, block masses included. The certificates are
-  conservative: `Σ1/S` ranges from 4.3·10⁵ to 3.0·10²⁵⁹, because the true decay rate is 4–5
-  times the certified rate `γ_κ` on the K4 and dimer families and about 19 times on the P4
-  family.
-- **Binary tree of K4 modules (Example 7.6).** The radial growth condition (GR) holds with `a = ln2/2` and
-  `C = 3√2` uniformly in depth, so the prefactor of Theorem C does not depend on the number of
-  modules. For a fixed pair, the diameter bound overtakes the Theorem C bound between depths 13
-  and 14.
-- **Mass–spring stiffness matrix (Example 7.7).** The certificates bound the time-uniform displacement
-  transmissibility `sup_τ |cos(τ√K)_{ts}|` without modal analysis; they hold for every size
-  tested, with certificate-to-exact ratios from 10⁷ to 10⁴⁷.
+- **Modular chains (14 instances, Table 2, Figure 1).** Every certificate is an Arb upper bound
+  computed from block data alone. The exact overlap sum `S(s,t)` comes from multiprecision
+  diagonalization and is used only for calibration. The findings:
+  - no certified inequality fails on any instance, for the total sum or for any block mass;
+  - the contour certificate lies 0.6 to 5.5 orders of magnitude above `S` and captures 0.98 to
+    0.99 of the exact decay rate in the number of modules;
+  - the Combes–Thomas baseline lies 5.6 to 259.5 orders above `S` and captures 0.05 to 0.17 of
+    that rate.
+
+  The rate fractions are secants between the shortest and the longest chain of each family.
+- **Wannier–Stark ladder (Example 7.1, Figure 2).** The ladder has site energies `lΔ`, hopping
+  `μ` and one site per community; the experiment's files write `F` for `Δ` and `J` for `μ`.
+  - On the infinite ladder, the excess of the chain-bound certificate over `S` follows the law
+    of Eq. (40) of the paper to within 0.005 in `log10`, for `10 ≤ N ≤ 100` and seven values of
+    `Δ/μ` from 5 to 100.
+  - On finite chains up to `N = 60`, the walk-sum bound lies 0.9 to 2.4 orders above `S` and
+    captures 0.994 to 0.996 of the exact rate.
 
 Each experiment's `README.md` gives the full account, including the hypotheses that were
-refuted.
+refuted along the way.
+
+### Names in the files and in the paper
+
+The code and the CSV files keep the internal names of the certificates. The paper calls them:
+
+| In the files | In the paper |
+|---|---|
+| `N1` | bridge bound (Theorem 5.4) |
+| `N2` | walk-sum bound (Lemma 5.5) |
+| `N2p_path` | chain bound (Theorem 5.6); `N2p_stated` and `N2p_ladder` are its forms (i) and (ii) |
+| `N3x` | contour certificate (Proposition 5.8, Appendix A) |
+| `Sigma1` | Combes–Thomas bound (the baseline of Section 7 and Appendix B) |
+| `floor` | `Σ_i ‖P_i e_s‖ ‖P_i e_t‖` with the exact masses |
+| `N3` | hybrid bound (computed, not in the paper) |
 
 ## Repository structure
 
 ```
 .
 ├── README.md, LICENSE, LICENSE-DATA, CITATION.cff, requirements.txt
-├── reproduction_report.md          clean-environment rerun of every command below
+├── reproduction_report.md          clean-environment reruns of the commands below
 ├── experiments/
-│   ├── 2026-09-18_interval_certification/   Table 2 of Section 7, Arb certification
-│   │   └── data/examples_sec7.tex           Examples 7.2–7.4 (with tables), verbatim extract
-│   ├── 2026-09-18_exact_benchmarks/         certificates vs exact values; Figure 1
-│   ├── 2026-09-18_binary_tree_family/       (GR) constants and Theorem C on a tree
-│   └── 2026-09-18_mode_localization/        mass–spring stiffness matrix
+│   ├── 2026-10-08_neumann_14rows/           Table 2 and Figure 1 (modular chains)
+│   ├── 2026-10-08_stark_sharpness/          Example 7.1 and Figure 2 (Wannier–Stark ladder)
+│   ├── 2026-09-18_interval_certification/   Combes–Thomas baseline (Sigma1), read by neumann_14rows
+│   └── 2026-09-18_exact_benchmarks/         exact S and block masses, read by both 2026-10-08 experiments
 │       (each: README.md, plan.md, experiment_log.json, env/, code/, results/)
-└── verification/                    independent double-precision re-derivations
+└── verification/                    independent double-precision re-derivation of the baseline
 ```
 
 ## Requirements
 
-Python 3.12 (results produced with 3.12.3 on Linux). A LaTeX installation is needed only to
-regenerate the figure (the SciencePlots `science` style sets `text.usetex`).
+Python 3.12 (the results were produced with 3.12.3 on Linux). A LaTeX installation is needed only
+to regenerate the figures, because the SciencePlots `science` style sets `text.usetex`.
 
 ```sh
 python3 -m venv .venv
@@ -81,57 +92,69 @@ python3 -m venv .venv
 pip install -r requirements.txt
 ```
 
-## Reproducing the results
+## Reproducing the paper's Section 7
 
-Run `interval_certification` first: `exact_benchmarks` and `binary_tree_family` read its
-`results/aggregate.csv`. Commands are run from `experiments/<id>/code/` unless stated.
+The two 2026-10-08 experiments read the committed results of the two 2026-09-18 experiments, so
+those do not need to be rerun. Run the commands from `experiments/<id>/code/`.
 
 | Paper item | Experiment | Commands | Produces | Time |
 |---|---|---|---|---|
-| Table 2 of Section 7, displayed parameters, choice of `κ` | `interval_certification` | `python run.py --prec 256`, `python run.py --prec 512`, `python crosscheck.py` | `results/aggregate.csv`, `params.csv`, `kappa_audit.csv` (and `_prec512`) | 3 min |
-| Certificates vs exact values on Examples 7.2–7.4 | `exact_benchmarks` | `python run_benchmark.py`, `python analysis.py` | `results/aggregate.csv`, `masses.csv`, `decay_fits.csv` | 14 min |
-| Figure 1 (`itf_vs_bounds`, panels (a)–(d)) | `exact_benchmarks` | `python run_sweep.py`, `python make_figure.py` (panels (c), (d) read `../../2026-09-18_binary_tree_family/results/`; run that experiment first, or use its committed CSVs) | `results/sweep.csv`, `figures/itf_vs_bounds.pdf` | 3 min |
-| Binary tree of K4 modules (Example 7.6) | `binary_tree_family` | `python run.py --rmax 12 --rexact 5`, `python fixed_pair.py` | `results/aggregate.csv`, `fixed_pair.csv`, `radial_constants.csv`, `theoremC_choice.csv` | 28 min |
-| Mass–spring stiffness matrix (Example 7.7) | `mode_localization` | `python run.py --kmax 10` | `results/aggregate.csv`, `participation.csv` | 1 min |
-| Proposition 8.1 (Section 8.2) | — | from `verification/`: `python verify_prop_comparacao_round3.py` | stdout, ends with `NO VIOLATION` | 14 s |
+| Check of the reduced contour solve against the dense one | `neumann_14rows` | `python crosscheck.py --M 300` | `results/crosscheck.csv` | 8 s |
+| Table 2, Figure 1, the rate fractions | `neumann_14rows` | `python run.py --tag final`, `python aggregate.py --tag final`, `python analysis.py`, `python make_figure.py` | `results/raw_final.json`, `aggregate.csv`, `blocks.csv`, `rate_shares.csv`, `figures/…_bounds_vs_k.pdf` | 9 min |
+| Example 7.1, Eq. (40), Figure 2 | `stark_sharpness` | `python run.py --part Z`, `python run.py --part chain`, `python analysis.py`, `python make_figure.py` | `results/z_series.csv`, `chains.csv`, `chain_blocks.csv`, `fits.csv`, `chain_summary.csv`, `rate_shares.csv`, `figures/…_rate.pdf` | 4 min |
 
-All of these commands were rerun from a clean export of this tree in a fresh virtual
-environment; `reproduction_report.md` has the exit codes, the wall times above (AMD Ryzen 7
-3700U laptop, with the last four experiments running in parallel) and the file-by-file
-comparison with the versioned results.
+`run.py` of `neumann_14rows` resumes from `results/raw_final.json`. Delete that file first to
+recompute everything rather than only the missing tasks. Both `run.py` scripts use 6 worker
+processes by default (`--workers`).
+
+The commands above were rerun from a clean export of this tree in a fresh virtual environment.
+`reproduction_report.md` has the exit codes, the wall times (AMD Ryzen 7 3700U laptop) and the
+file-by-file comparison with the versioned results.
 
 ## About the records
 
-- `plan.md` is the plan of each experiment, written before it ran; its hypotheses are checked
-  in the experiment's `README.md`, and some were refuted.
-- `experiment_log.json` is append-only. Each run records its parameters, input and output
-  hashes, wall time, peak memory and status. The fields `provenance_note` and `code_commit`
-  refer to the authors' internal tracking (review-item identifiers such as R-C4, commits of the
-  private working repository) and are kept verbatim.
-- Running a script **modifies versioned files**: it appends a run to `experiment_log.json` and
+- `plan.md` is the plan of each experiment, written before it ran. The experiment's `README.md`
+  checks its hypotheses, and some were refuted.
+- `experiment_log.json` is append-only. Each run records its parameters, its input and output
+  hashes, the wall time, the peak memory and the status. The fields `provenance_note` and
+  `code_commit`, and some file names in `code_files`, refer to the authors' internal tracking:
+  - review items;
+  - a calibration prototype that is not published;
+  - commits of the private working repository.
+
+  They are kept verbatim.
+- The published code differs from the code that produced the logged runs in three lines, all
+  marked `public export`:
+  - both `run.py` files skip the unpublished calibration prototype when they hash their inputs;
+  - `aggregate.py` reads `exact_benchmarks/results/aggregate.csv` instead of `final.csv`. The
+    two files are byte-identical, and only the former is versioned.
+
+  `aggregate.py --oracle` rebuilds `results/probe_oracle.csv` from an internal float probe that
+  is not published. Without the flag, the versioned `probe_oracle.csv` is used.
+- Running a script **modifies versioned files**. It appends a run to `experiment_log.json` and
   rewrites `env/requirements.txt` and `env/system_info.json` with your environment. Work on a
-  copy, or use `git restore` afterwards, to keep the recorded state.
+  copy, or run `git restore` afterwards, to keep the recorded state.
 - CSV files are stored byte-exact (`.gitattributes`), so the SHA-256 values in the logs can be
   checked against them.
-- All computations are deterministic; there are no seeds.
-- `families.py`, `bounds.py`, `spectral_mp.py` and `logutil.py` are duplicated across the
-  experiments on purpose (each run logs the hash of its own copy); the copies are identical.
-- `interval_certification/data/examples_sec7.tex` is a verbatim extract of the examples now
-  numbered 7.2–7.4 in the manuscript source, tables included; `run.py` parses the printed values
-  from it. The extract predates two changes in the manuscript: the same 14 rows, with the same
-  values, are now printed as a single Table 2 instead of three tables, and a new Example 7.1
-  shifted the numbering of the examples by one.
-- Files written before that shift keep the numbering of their date: `plan.md`, the code
-  docstrings, `figure_manifest.json`, `verification/verify_examples.py` and
-  `reproduction_report.md`. There, Examples 7.1–7.3 are today's 7.2–7.4, and the binary tree
-  (Example 7.5) is today's Example 7.6.
+- All computations are deterministic, and there are no seeds.
+- `logutil.py` and some numerical helpers are duplicated across the experiments on purpose,
+  because each run logs the hash of its own copy.
+- The 2026-09-18 experiments were run for an earlier version of the manuscript. Their READMEs,
+  docstrings and `data/examples_sec7.tex` use that version's numbering and title. There the 14
+  rows are "Table 2" or "Tables 2–4" with Examples 7.2–7.4, and in the 2026-10-08 READMEs they
+  are "Table 3". In today's paper they are the rows of Table 2 in Section 7. The figure
+  `itf_vs_bounds` of `exact_benchmarks` belongs to that earlier version. Its panels (c) and (d)
+  read the binary-tree experiment, which left this tree in the 2026-10 update, together with
+  the mass–spring experiment and the check of the earlier Proposition 8.1. All three remain in
+  the history at commit `79d4382`.
 
 ## Citation
 
-See `CITATION.cff`. The manuscript is in preparation; cite this repository together with the
-paper once it appears.
+See `CITATION.cff`. The manuscript is in preparation. Once the paper appears, cite this
+repository together with it.
 
 ## License
 
-Code: MIT (`LICENSE`). Data, results and figures (CSV files, experiment logs, figures):
-Creative Commons Attribution 4.0 International (`LICENSE-DATA`).
+The code is under the MIT license (`LICENSE`). The data, results and figures (CSV files,
+experiment logs, figures) are under the Creative Commons Attribution 4.0 International license
+(`LICENSE-DATA`).
