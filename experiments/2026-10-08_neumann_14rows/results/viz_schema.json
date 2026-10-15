@@ -1,0 +1,109 @@
+{
+  "figures": [
+    {
+      "title": "log10 of each certificate on S vs k (cliques)",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "log10_sigma",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "cliques"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "log10 of each certificate on S vs k (dimer)",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "log10_sigma",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "dimer"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "log10 of each certificate on S vs k (p4)",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "log10_sigma",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "p4"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "Distance to the exact S, log10(Sigma/S), vs k (cliques)",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "dist_S",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "cliques",
+        "certificate": [
+          "Sigma1",
+          "N1",
+          "N2",
+          "N2p_path",
+          "N3",
+          "N3x",
+          "best"
+        ]
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "Distance to the exact S, log10(Sigma/S), vs k (dimer)",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "dist_S",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "dimer",
+        "certificate": [
+          "Sigma1",
+          "N1",
+          "N2",
+          "N2p_path",
+          "N3",
+          "N3x",
+          "best"
+        ]
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "Distance to the exact S, log10(Sigma/S), vs k (p4)",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "dist_S",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "p4",
+        "certificate": [
+          "Sigma1",
+          "N1",
+          "N2",
+          "N2p_path",
+          "N3",
+          "N3x",
+          "best"
+        ]
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    }
+  ]
+}

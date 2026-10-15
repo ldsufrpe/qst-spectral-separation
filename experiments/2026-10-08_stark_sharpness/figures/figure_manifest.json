@@ -1,0 +1,84 @@
+{
+  "rate": {
+    "panels": [
+      "single panel: log10(Sigma/S) versus N at F/J = 10"
+    ],
+    "elements": [
+      {
+        "artist": "line+marker every 10 N from N = 11",
+        "encodes": "Sigma1 certificate on the infinite ladder (Z), log10(Sigma/S)",
+        "visual": "#E69F00, linestyle '-', marker 's'",
+        "panel": "all"
+      },
+      {
+        "artist": "line+marker every 10 N from N = 11",
+        "encodes": "N1 certificate on the infinite ladder (Z), log10(Sigma/S)",
+        "visual": "#56B4E9, linestyle '--', marker '^'",
+        "panel": "all"
+      },
+      {
+        "artist": "line+marker every 10 N from N = 11",
+        "encodes": "N2p_stated certificate on the infinite ladder (Z), log10(Sigma/S)",
+        "visual": "#009E73, linestyle '-.', marker 'D'",
+        "panel": "all"
+      },
+      {
+        "artist": "line+marker every 10 N from N = 11",
+        "encodes": "N2p_ladder certificate on the infinite ladder (Z), log10(Sigma/S)",
+        "visual": "#0072B2, linestyle ':', marker 'P'",
+        "panel": "all"
+      },
+      {
+        "artist": "line",
+        "encodes": "N2p_bridge certificate on the infinite ladder (Z), log10(Sigma/S)",
+        "visual": "#D55E00, linestyle '-', marker None",
+        "panel": "all"
+      },
+      {
+        "artist": "dashed line",
+        "encodes": "asymptotic law log10(pi N/2) + N log10 B(q'^2) - log10((1-4q'^2)(1-eta^2)), q' = 2J/F, eta = 2J/(F-2J), of the per-bridge form",
+        "visual": "black, dashed (4,2), thin",
+        "panel": "all"
+      },
+      {
+        "artist": "hollow circles",
+        "encodes": "N2 (Prop. N2, delta_jl = J) on finite chains L = N+1, against the chain's exact S",
+        "visual": "black hollow circle, no line",
+        "panel": "all"
+      },
+      {
+        "artist": "X markers",
+        "encodes": "rigorous N3x upper sum (M = 2000) on finite chains L <= 21",
+        "visual": "#CC79A7 X, no line",
+        "panel": "all"
+      },
+      {
+        "artist": "legend",
+        "encodes": "the eight series",
+        "visual": "center right, no frame",
+        "panel": "all"
+      }
+    ],
+    "axes": {
+      "x": "N, the number of bridges between s and t",
+      "y": "log10(Sigma/S)",
+      "xscale": "linear",
+      "yscale": "linear (values are log10)"
+    },
+    "params": {
+      "J": 1,
+      "F_over_J": 10,
+      "N_range": "1..100 on Z; chains L = 6, 11, 21, 41, 61",
+      "figsize_in": [
+        4.22,
+        2.8
+      ],
+      "legend_labels": "manuscript names, set in Phase 3 S9 (2026-10-13) via LABELS in code/make_figure.py",
+      "width_note": "iopjournal text width 153 mm = 6.02 in, measured in S11 (2026-10-14); printed at 0.7\\linewidth, no tight bbox"
+    },
+    "reference_lines": [
+      "asymptotic law, dashed"
+    ],
+    "normalization": "Sigma divided by the exact S of the same instance (Z: Bessel; chains: diagonalization)"
+  }
+}

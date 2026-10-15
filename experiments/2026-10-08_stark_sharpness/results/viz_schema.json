@@ -1,0 +1,46 @@
+{
+  "figures": [
+    {
+      "title": "Distance to exact S, log10(Sigma/S), vs N on Z (F/J = 10)",
+      "plot_type": "line",
+      "x_axis": "N",
+      "y_axis": "dist_S",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "part": "Z",
+        "F_over_J": "10"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "Per-bridge N2' distance to S vs N on Z, by F/J",
+      "plot_type": "line",
+      "x_axis": "N",
+      "y_axis": "dist_S",
+      "z_axis": null,
+      "series": "F_over_J",
+      "filters": {
+        "part": "Z",
+        "certificate": "N2p_bridge"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "Finite chains: distance to exact S vs N (F/J = 10)",
+      "plot_type": "line",
+      "x_axis": "N",
+      "y_axis": "dist_S",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "part": "chain",
+        "F_over_J": "10"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    }
+  ]
+}

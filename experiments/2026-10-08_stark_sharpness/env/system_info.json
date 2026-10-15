@@ -1,0 +1,10 @@
+{
+  "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "kernel": "7.0.0-34-generic",
+  "python": "3.12.3",
+  "cpu": "AMD Ryzen 7 3700U with Radeon Vega Mobile Gfx",
+  "n_cores": 8,
+  "ram_gb": 13.6,
+  "captured_at": "2026-10-08T17:09:10-03:00",
+  "openblas_num_threads": "1"
+}

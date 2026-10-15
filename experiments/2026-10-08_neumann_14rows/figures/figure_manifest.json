@@ -1,0 +1,83 @@
+{
+  "bounds_vs_k": {
+    "panels": [
+      "(a) $K_4$ modules: family cliques, the Table 3 rows, versus k",
+      "(b) dimer modules: family dimer, the Table 3 rows, versus k",
+      "(c) $P_4$ modules: family p4, the Table 3 rows, versus k"
+    ],
+    "elements": [
+      {
+        "artist": "line+marker",
+        "encodes": "exact S(s,t) (multiprecision diagonalization, 2026-09-18_exact_benchmarks)",
+        "visual": "#000000, linestyle '-', marker 'o', hollow",
+        "panel": "all"
+      },
+      {
+        "artist": "line",
+        "encodes": "sum_i ||P_i e_s|| ||P_i e_t|| with exact block masses (best any block-mass certificate can give)",
+        "visual": "#000000, linestyle ':', marker None",
+        "panel": "all"
+      },
+      {
+        "artist": "line+marker",
+        "encodes": "paper's Combes-Thomas certificate Sigma1 (Arb, 2026-09-18_interval_certification)",
+        "visual": "#E69F00, linestyle '-', marker 's'",
+        "panel": "all"
+      },
+      {
+        "artist": "line+marker",
+        "encodes": "Theorem N1 certificate (Arb)",
+        "visual": "#56B4E9, linestyle '--', marker '^'",
+        "panel": "all"
+      },
+      {
+        "artist": "line+marker",
+        "encodes": "Proposition N2 community-graph walk sum (Arb)",
+        "visual": "#009E73, linestyle '-.', marker 'D'",
+        "panel": "all"
+      },
+      {
+        "artist": "line+marker",
+        "encodes": "Corollary N2', first-arrival path product (Arb)",
+        "visual": "#0072B2, linestyle ':', marker 'P'",
+        "panel": "all"
+      },
+      {
+        "artist": "line+marker",
+        "encodes": "rigorous N3x upper Riemann sum, min over M in {1000, 2000} (Arb)",
+        "visual": "#CC79A7, linestyle '-', marker 'X'",
+        "panel": "all"
+      },
+      {
+        "artist": "legend",
+        "encodes": "the 7 series",
+        "visual": "below the panels, 4 columns, no frame",
+        "panel": "all"
+      },
+      {
+        "artist": "panel titles",
+        "encodes": "family",
+        "visual": "(a)-(c) above each panel",
+        "panel": "all"
+      }
+    ],
+    "axes": {
+      "x": "number of modules k",
+      "y": "log10 of the value (each certificate bounds S from above)",
+      "xscale": "linear",
+      "yscale": "linear (values are log10)"
+    },
+    "params": {
+      "rows": "K4 k=3,4,5,6,8,10; dimer k=3,5,7,9,12; P4 k=10,20,40",
+      "certificate_precision": "Arb 128 bits, upper endpoints",
+      "figsize_in": [
+        6.02,
+        2.35
+      ],
+      "legend_labels": "manuscript names, set in Phase 3 S9 (2026-10-13) via LABELS in code/make_figure.py",
+      "width_note": "iopjournal text width 153 mm = 6.02 in, measured in S11 (2026-10-14); printed at \\linewidth, no tight bbox"
+    },
+    "reference_lines": [],
+    "normalization": "none; log10 of S and of each bound"
+  }
+}

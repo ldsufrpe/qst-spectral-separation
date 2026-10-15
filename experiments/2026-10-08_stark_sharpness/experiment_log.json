@@ -1,0 +1,2083 @@
+{
+  "experiment_id": "2026-10-08_stark_sharpness",
+  "paper_project": "2026-09_qst-spectral-separation",
+  "opportunity_reference": "opportunities.md #2",
+  "mode": "numerical",
+  "subareas_active": [
+    "numerical",
+    "symbolic"
+  ],
+  "target_venue": "J. Phys. A: Mathematical and Theoretical",
+  "created_at": "2026-10-08T16:45:00-03:00",
+  "provenance_note": "Phase 4 of opportunity #2, MR1: sharpness of the walk-sum certificate (N2, N2' forms) on the uniform Wannier-Stark ladder, against the exact Bessel solution on Z and exact high-precision diagonalization of finite chains. Calibrated by experiments/toy/2026-10-08_neumann_calibration (T3).",
+  "plan_md_hash": "sha256:4108764cd963ceb154817e9c7d515666e4e7102ec5637fd908f1063ab29df635",
+  "code_commit": "git:f40f2fb",
+  "system_info_hash": "sha256:179f722d1657f3b74bc4afae3ac5e7f0a10c891652db9b742e4fa11814d2b3b9",
+  "runs": [
+    {
+      "timestamp_start": "2026-10-08T16:41:02-03:00",
+      "timestamp_end": "2026-10-08T16:41:04-03:00",
+      "wallclock_seconds": 2.41,
+      "peak_memory_mb": 88.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "10",
+        "J": 1,
+        "N_max": 12,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "smoke"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:a2da76688317aca147cd5684571dd782571e91431917aa663d9e1a2bdb29dec9",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/smoke_z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0001"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:41:04-03:00",
+      "timestamp_end": "2026-10-08T16:41:10-03:00",
+      "wallclock_seconds": 6.26,
+      "peak_memory_mb": 62.7,
+      "status": "failure",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 6,
+        "F_over_J": "10",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "smoke"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:a2da76688317aca147cd5684571dd782571e91431917aa663d9e1a2bdb29dec9",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/smoke_chains.csv",
+          "results/smoke_chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 6,
+          "dps": 70
+        }
+      },
+      "exit_code": 1,
+      "notes": "Deterministic: seed null. dps trail [(50, '2.6384453e-6'), (70, '2.6384453e-6')]. ",
+      "run_id": "r0002"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:50:17-03:00",
+      "timestamp_end": "2026-10-08T16:50:21-03:00",
+      "wallclock_seconds": 3.91,
+      "peak_memory_mb": 88.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "10",
+        "J": 1,
+        "N_max": 12,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "smoke"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/smoke_z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0003"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:50:21-03:00",
+      "timestamp_end": "2026-10-08T16:50:50-03:00",
+      "wallclock_seconds": 29.67,
+      "peak_memory_mb": 62.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 6,
+        "F_over_J": "10",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "smoke"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/smoke_chains.csv",
+          "results/smoke_chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 70
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(50, '2.6384453e-6'), (70, '2.6384453e-6')]. ",
+      "run_id": "r0004"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:51:07-03:00",
+      "timestamp_end": "2026-10-08T16:51:45-03:00",
+      "wallclock_seconds": 37.86,
+      "peak_memory_mb": 91.7,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "5",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0005"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:51:45-03:00",
+      "timestamp_end": "2026-10-08T16:52:11-03:00",
+      "wallclock_seconds": 25.89,
+      "peak_memory_mb": 91.8,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "6",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0006"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:52:11-03:00",
+      "timestamp_end": "2026-10-08T16:52:53-03:00",
+      "wallclock_seconds": 41.72,
+      "peak_memory_mb": 92.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "17/2",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0007"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:52:53-03:00",
+      "timestamp_end": "2026-10-08T16:53:33-03:00",
+      "wallclock_seconds": 40.19,
+      "peak_memory_mb": 92.3,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "10",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0008"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:53:33-03:00",
+      "timestamp_end": "2026-10-08T16:54:14-03:00",
+      "wallclock_seconds": 41.14,
+      "peak_memory_mb": 92.5,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "16",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0009"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:54:14-03:00",
+      "timestamp_end": "2026-10-08T16:54:51-03:00",
+      "wallclock_seconds": 36.96,
+      "peak_memory_mb": 92.7,
+      "status": "failure",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "32",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 1,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0010"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:54:51-03:00",
+      "timestamp_end": "2026-10-08T16:55:32-03:00",
+      "wallclock_seconds": 40.65,
+      "peak_memory_mb": 93.1,
+      "status": "failure",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "100",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:6e1ba332a0af39d3879c8f7b62a31b87970d5b87a982c46dbfdb6c91c211d0f8",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 1,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0011"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:56:23-03:00",
+      "timestamp_end": "2026-10-08T16:56:43-03:00",
+      "wallclock_seconds": 20.73,
+      "peak_memory_mb": 91.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "5",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0012"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:56:43-03:00",
+      "timestamp_end": "2026-10-08T16:57:04-03:00",
+      "wallclock_seconds": 20.97,
+      "peak_memory_mb": 91.8,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "6",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0013"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:57:04-03:00",
+      "timestamp_end": "2026-10-08T16:57:41-03:00",
+      "wallclock_seconds": 36.59,
+      "peak_memory_mb": 92.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "17/2",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0014"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:57:41-03:00",
+      "timestamp_end": "2026-10-08T16:58:19-03:00",
+      "wallclock_seconds": 37.9,
+      "peak_memory_mb": 92.4,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "10",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0015"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:58:19-03:00",
+      "timestamp_end": "2026-10-08T16:58:56-03:00",
+      "wallclock_seconds": 36.75,
+      "peak_memory_mb": 92.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "16",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0016"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:58:56-03:00",
+      "timestamp_end": "2026-10-08T16:59:33-03:00",
+      "wallclock_seconds": 37.15,
+      "peak_memory_mb": 92.8,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "32",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0017"
+    },
+    {
+      "timestamp_start": "2026-10-08T16:59:33-03:00",
+      "timestamp_end": "2026-10-08T17:00:13-03:00",
+      "wallclock_seconds": 40.63,
+      "peak_memory_mb": 93.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "Z",
+        "F_over_J": "100",
+        "J": 1,
+        "N_max": 100,
+        "forms": "Sigma1,N1,N2p_stated,N2p_ladder,N2p_bridge",
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/z_series.csv"
+        ],
+        "scalar_results": {
+          "violations": 0
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. Sigma1 kappa grid-optimal per N (float choice).",
+      "run_id": "r0018"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:09:10-03:00",
+      "timestamp_end": "2026-10-08T17:09:30-03:00",
+      "wallclock_seconds": 20.27,
+      "peak_memory_mb": 63.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 41,
+        "F_over_J": "6",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 126
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(106, '1.0052304e-67'), (126, '1.0052304e-67')]. ",
+      "run_id": "r0019"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:09:30-03:00",
+      "timestamp_end": "2026-10-08T17:09:50-03:00",
+      "wallclock_seconds": 20.27,
+      "peak_memory_mb": 64.5,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 41,
+        "F_over_J": "17/2",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 133
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(113, '8.957366e-74'), (133, '8.957366e-74')]. ",
+      "run_id": "r0020"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:09:50-03:00",
+      "timestamp_end": "2026-10-08T17:10:10-03:00",
+      "wallclock_seconds": 19.43,
+      "peak_memory_mb": 64.7,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 41,
+        "F_over_J": "10",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 135
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(115, '1.3461972e-76'), (135, '1.3461972e-76')]. ",
+      "run_id": "r0021"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:09:10-03:00",
+      "timestamp_end": "2026-10-08T17:10:12-03:00",
+      "wallclock_seconds": 62.32,
+      "peak_memory_mb": 66.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 61,
+        "F_over_J": "6",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 170
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(150, '2.8296419e-111'), (170, '2.8296419e-111')]. ",
+      "run_id": "r0022"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:09:10-03:00",
+      "timestamp_end": "2026-10-08T17:10:13-03:00",
+      "wallclock_seconds": 62.87,
+      "peak_memory_mb": 67.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 61,
+        "F_over_J": "17/2",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 179
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(159, '2.3772868e-120'), (179, '2.3772868e-120')]. ",
+      "run_id": "r0023"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:09:10-03:00",
+      "timestamp_end": "2026-10-08T17:10:14-03:00",
+      "wallclock_seconds": 63.95,
+      "peak_memory_mb": 67.8,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 61,
+        "F_over_J": "16",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 196
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(176, '7.8399058e-137'), (196, '7.8399058e-137')]. ",
+      "run_id": "r0024"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:09:10-03:00",
+      "timestamp_end": "2026-10-08T17:10:14-03:00",
+      "wallclock_seconds": 64.56,
+      "peak_memory_mb": 67.5,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 61,
+        "F_over_J": "10",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 183
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(163, '1.384619e-124'), (183, '1.384619e-124')]. ",
+      "run_id": "r0025"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:09:10-03:00",
+      "timestamp_end": "2026-10-08T17:10:17-03:00",
+      "wallclock_seconds": 66.95,
+      "peak_memory_mb": 67.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 61,
+        "F_over_J": "32",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 214
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(194, '6.801386e-155'), (214, '6.801386e-155')]. ",
+      "run_id": "r0026"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:10:10-03:00",
+      "timestamp_end": "2026-10-08T17:10:29-03:00",
+      "wallclock_seconds": 19.49,
+      "peak_memory_mb": 65.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 41,
+        "F_over_J": "16",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 144
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(124, '9.2168221e-85'), (144, '9.2168221e-85')]. ",
+      "run_id": "r0027"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:10:12-03:00",
+      "timestamp_end": "2026-10-08T17:10:31-03:00",
+      "wallclock_seconds": 18.84,
+      "peak_memory_mb": 66.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 41,
+        "F_over_J": "32",
+        "J": 1,
+        "n3x_M": null,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 156
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(136, '8.3851737e-97'), (156, '8.3851737e-97')]. ",
+      "run_id": "r0028"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:10:31-03:00",
+      "timestamp_end": "2026-10-08T17:11:36-03:00",
+      "wallclock_seconds": 64.47,
+      "peak_memory_mb": 67.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 11,
+        "F_over_J": "6",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 71
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(51, '4.6071315e-12'), (71, '4.6071315e-12')]. ",
+      "run_id": "r0029"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:11:36-03:00",
+      "timestamp_end": "2026-10-08T17:12:27-03:00",
+      "wallclock_seconds": 51.27,
+      "peak_memory_mb": 67.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 11,
+        "F_over_J": "17/2",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 72
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(52, '1.4241675e-13'), (72, '1.4241675e-13')]. ",
+      "run_id": "r0030"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:12:27-03:00",
+      "timestamp_end": "2026-10-08T17:13:16-03:00",
+      "wallclock_seconds": 49.09,
+      "peak_memory_mb": 67.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 11,
+        "F_over_J": "10",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 73
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(53, '2.8088188e-14'), (73, '2.8088188e-14')]. ",
+      "run_id": "r0031"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:10:13-03:00",
+      "timestamp_end": "2026-10-08T17:13:23-03:00",
+      "wallclock_seconds": 189.77,
+      "peak_memory_mb": 67.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 21,
+        "F_over_J": "6",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 87
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(67, '1.171905e-28'), (87, '1.171905e-28')]. ",
+      "run_id": "r0032"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:10:15-03:00",
+      "timestamp_end": "2026-10-08T17:13:25-03:00",
+      "wallclock_seconds": 190.43,
+      "peak_memory_mb": 68.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 21,
+        "F_over_J": "10",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 92
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(72, '4.3008528e-33'), (92, '4.3008528e-33')]. ",
+      "run_id": "r0033"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:10:14-03:00",
+      "timestamp_end": "2026-10-08T17:13:25-03:00",
+      "wallclock_seconds": 191.08,
+      "peak_memory_mb": 68.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 21,
+        "F_over_J": "17/2",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 90
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(70, '1.1087213e-31'), (90, '1.1087213e-31')]. ",
+      "run_id": "r0034"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:10:17-03:00",
+      "timestamp_end": "2026-10-08T17:13:27-03:00",
+      "wallclock_seconds": 189.77,
+      "peak_memory_mb": 67.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 21,
+        "F_over_J": "16",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 96
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(76, '3.5621812e-37'), (96, '3.5621812e-37')]. ",
+      "run_id": "r0035"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:13:25-03:00",
+      "timestamp_end": "2026-10-08T17:13:40-03:00",
+      "wallclock_seconds": 14.89,
+      "peak_memory_mb": 68.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 6,
+        "F_over_J": "17/2",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 70
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(50, '5.9222241e-6'), (70, '5.9222241e-6')]. ",
+      "run_id": "r0036"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:13:25-03:00",
+      "timestamp_end": "2026-10-08T17:13:40-03:00",
+      "wallclock_seconds": 15.24,
+      "peak_memory_mb": 68.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 6,
+        "F_over_J": "6",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 70
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(50, '3.329905e-5'), (70, '3.329905e-5')]. ",
+      "run_id": "r0037"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:10:29-03:00",
+      "timestamp_end": "2026-10-08T17:13:41-03:00",
+      "wallclock_seconds": 191.54,
+      "peak_memory_mb": 65.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 21,
+        "F_over_J": "32",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 102
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(82, '3.3992713e-43'), (102, '3.3992713e-43')]. ",
+      "run_id": "r0038"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:13:27-03:00",
+      "timestamp_end": "2026-10-08T17:13:42-03:00",
+      "wallclock_seconds": 15.21,
+      "peak_memory_mb": 67.9,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 6,
+        "F_over_J": "10",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 70
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(50, '2.6384453e-6'), (70, '2.6384453e-6')]. ",
+      "run_id": "r0039"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:13:40-03:00",
+      "timestamp_end": "2026-10-08T17:13:52-03:00",
+      "wallclock_seconds": 12.42,
+      "peak_memory_mb": 68.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 6,
+        "F_over_J": "16",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 70
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(50, '2.5325679e-7'), (70, '2.5325679e-7')]. ",
+      "run_id": "r0040"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:13:40-03:00",
+      "timestamp_end": "2026-10-08T17:13:52-03:00",
+      "wallclock_seconds": 12.27,
+      "peak_memory_mb": 68.1,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 6,
+        "F_over_J": "32",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 70
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(50, '7.939014e-9'), (70, '7.939014e-9')]. ",
+      "run_id": "r0041"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:13:16-03:00",
+      "timestamp_end": "2026-10-08T17:13:58-03:00",
+      "wallclock_seconds": 42.0,
+      "peak_memory_mb": 67.2,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 11,
+        "F_over_J": "16",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 75
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(55, '2.5618327e-16'), (75, '2.5618327e-16')]. ",
+      "run_id": "r0042"
+    },
+    {
+      "timestamp_start": "2026-10-08T17:13:23-03:00",
+      "timestamp_end": "2026-10-08T17:14:01-03:00",
+      "wallclock_seconds": 37.99,
+      "peak_memory_mb": 67.6,
+      "status": "success",
+      "seed": null,
+      "parameters": {
+        "part": "chain",
+        "L": 11,
+        "F_over_J": "32",
+        "J": 1,
+        "n3x_M": 2000,
+        "prec": 128,
+        "scale": "canonical"
+      },
+      "inputs": {
+        "code_files": [
+          "experiments/2026-10-08_stark_sharpness/code/stark.py",
+          "experiments/2026-10-08_stark_sharpness/code/run.py",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py"
+        ],
+        "code_hashes": {
+          "experiments/2026-10-08_stark_sharpness/code/stark.py": "sha256:1b9d5dcc8baf17c006f01de7fd7d21018a260c3448e0c64ddcd2f30badc68367",
+          "experiments/2026-10-08_stark_sharpness/code/run.py": "sha256:fdf58cef757e043d8ba7bc5cb823a0f2f4e503e1291e0036dedd82cf270c65ab",
+          "experiments/2026-10-08_stark_sharpness/code/logutil.py": "sha256:eb8e78e0220b95dada39a04329d8fad2455f4c7e1a8c9a97e4697ba0fee5b739",
+          "experiments/2026-10-08_neumann_14rows/code/neumann.py": "sha256:550a3e56611fb3b9e48713a9f74548ae39e3e5e3475d75c34d7a6aca671aab98",
+          "experiments/toy/2026-10-08_neumann_calibration/code/run.py": "sha256:ed4aad287a6b103d6b990fa6211f8fb12f897cadf354336698c3286520a01f25",
+          "experiments/2026-09-18_exact_benchmarks/code/spectral_mp.py": "sha256:a8b42430edf582f9fa60b017c8cecedb0fad66ee76956fce7f0ab48ec1e8fd20"
+        }
+      },
+      "outputs": {
+        "result_files": [
+          "results/chains.csv",
+          "results/chain_blocks.csv"
+        ],
+        "scalar_results": {
+          "violations": 0,
+          "dps": 78
+        }
+      },
+      "exit_code": 0,
+      "notes": "Deterministic: seed null. dps trail [(58, '2.5051894e-19'), (78, '2.5051894e-19')]. ",
+      "run_id": "r0043"
+    }
+  ],
+  "summary": {
+    "n_runs_total": 43,
+    "n_runs_success": 40,
+    "n_runs_failure": 3,
+    "n_runs_aborted": 0,
+    "run_groups": {
+      "smoke": "r0001-r0004 (r0002 failure: reduced-system bridge-row bug in neumann.py, fixed)",
+      "Z_pass1_superseded": "r0005-r0011 (1e-300 tail floor; r0010, r0011 failure)",
+      "Z_final": "r0012-r0018",
+      "chains": "r0019-r0043"
+    },
+    "aggregate_metrics": {
+      "violations": 0,
+      "fit_c_bridge_vs_pred": "abs dev +4e-5 at every F/J (O(1/N) fit-form bias); within 1e-6 with a 1/N term",
+      "fit_b": "0.490-0.497",
+      "S_level_spread_bridge": "<= 0.004 over N=10..100",
+      "chains_log10_N2_over_S": "0.91-2.38 (N<=60)",
+      "chains_log10_N3x_over_S": "0.17-0.74 (L<=21)",
+      "chains_log10_N1_Sigma1_over_S_at_L61": "101.9-105.5",
+      "rate_share_chain_L21_L61": {
+        "N2": "0.994-0.996",
+        "Sigma1": "0.06-0.31",
+        "N1": "0.08-0.32"
+      }
+    },
+    "key_findings": [
+      "On the uniform Wannier-Stark ladder the walk-sum certificate is sharp in rate: per-bridge N2' reproduces (2J/F)^N/N! up to (pi N/2) B(q'^2)^N, as predicted before the run.",
+      "On finite chains N2 sits 0.9-2.4 orders above the exact S up to N=60, against 102-105 orders for N1 and the paper's Sigma1; the chain ends do not move S.",
+      "N2' as written (global delta, sorted distances) loses a factor 4B(q^2) per bridge; the per-bridge statement removes it and also works for q >= 1/2."
+    ],
+    "matches_hypothesis": "supported",
+    "interpretation": "Hypotheses 2 and 3 supported; hypothesis 1 supported except the per-bridge c relative-0.02 criterion at F/J = 32 and 100, which fails as written because of an O(1/N) fit-form offset of 4e-5 common to all forms; with a 1/N term the deviation is below 1e-6."
+  }
+}
