@@ -1,0 +1,46 @@
+{
+  "figures": [
+    {
+      "title": "P4 modules, published parameters: log10 Sigma_1 against k (certified iff below log10(sqrt2-1) = -0.383)",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "log10_sigma",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "p4",
+        "regime": "published"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "K4 modules, stronger bridges q = 0.40: log10 Sigma_1 against k",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "log10_sigma",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "cliques",
+        "q_target": "0.40"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    },
+    {
+      "title": "dimer modules, stronger bridges q = 0.40: log10 Sigma_1 against k",
+      "plot_type": "line",
+      "x_axis": "k",
+      "y_axis": "log10_sigma",
+      "z_axis": null,
+      "series": "certificate",
+      "filters": {
+        "family": "dimer",
+        "q_target": "0.40"
+      },
+      "log_scale_x": false,
+      "log_scale_y": false
+    }
+  ]
+}

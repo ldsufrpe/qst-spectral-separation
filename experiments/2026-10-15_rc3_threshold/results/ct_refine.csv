@@ -1,0 +1,6 @@
+family,w,k,sigma_grid_1e4,sigma_min_fine_1e6,kappa_fine,eta_capped_every_kappa,eta_floor,still_fails
+cliques,3,4,0.4152249,0.4152249,0.000001,True,0.4152249,True
+cliques,3.5,2,0.4242424,0.4242424,0.000001,True,0.4242424,True
+dimer,2.07,4,0.4151451,0.4151451,0.000001,True,0.4151451,True
+dimer,2.42,2,0.4252343,0.4252343,0.000001,True,0.4252343,True
+p4,0.3,8,0.4252602,0.4252602,0.847013,False,0.6618269,True
